@@ -279,7 +279,7 @@ const Header = () => {
                       <div className=""
                         style={{
                           width: "28px",
-                          height: "2px",
+                          height: "max-content",
                           borderRadius: "100%",
                           backgroundColor: "#f8f8f8",
                           display: "flex",

@@ -219,7 +219,7 @@ const sendNotificationEmail = async (paymentStatus, email) => {
         </div>
 
         <div className='enroll-content'>
-          <div className="course-enquiry-form-contents">
+          <div className="course-enquiry-form-contents-enroll">
             <form className="enquiryform" onSubmit={handleSubmit} autoComplete="off">
               <div className="enquiryname">
                 <div className="enquiryfname">
