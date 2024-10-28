@@ -124,9 +124,9 @@ const Header = () => {
               Masterclass
             </Link>
             <Link
-              href="https://blog.trafyai.com"
+              href="https://blog.trafy.ai/"
               className="menu-resources"
-              onClick={() => handleNavigation("https://blog.trafyai.com")}
+              onClick={() => handleNavigation("https://blog.trafy.ai/")}
             >
               Resources
             </Link>
@@ -212,9 +212,9 @@ const Header = () => {
                   Masterclass
                 </Link>
                 <Link
-                  href="https://blog.trafyai.com"
+                  href="https://blog.trafy.ai/"
                   className="menu-resources"
-                  onClick={() => handleNavigation("https://blog.trafyai.com")}
+                  onClick={() => handleNavigation("https://blog.trafy.ai/")}
                 >
                   Resources
                 </Link>
