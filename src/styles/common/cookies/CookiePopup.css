@@ -1,0 +1,50 @@
+/* CookiePopup.css */
+
+.cookie-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: block !important; /* Force the popup to display */
+  }
+  
+.cookie-popup p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.cookie-popup button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-popup button:hover {
+    background-color: #ddd;
+}
+
+.cookie-popup button:first-of-type {
+    background-color: #0073e6;
+    color: white;
+}
+
+.cookie-popup button:nth-of-type(2) {
+    background-color: #ff5c5c;
+    color: white;
+}
+
+.cookie-popup button:nth-of-type(3) {
+    background-color: #ffcc00;
+    color: white;
+}

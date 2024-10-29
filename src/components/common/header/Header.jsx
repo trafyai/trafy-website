@@ -124,9 +124,9 @@ const Header = () => {
               Masterclass
             </Link>
             <Link
-              href="https://blog.trafyai.com"
+              href="http://localhost:3001"
               className="menu-resources"
-              onClick={() => handleNavigation("https://blog.trafyai.com")}
+              onClick={() => handleNavigation("http://localhost:3001")}
             >
               Resources
             </Link>

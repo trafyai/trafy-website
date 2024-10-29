@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
-import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { ref, set } from 'firebase/database';
 import { auth, database } from '@firebase'; // Adjust this path based on your actual file structure
 import Box from '@mui/material/Box';
@@ -21,15 +21,35 @@ const Login = () => {
     const [loading, setLoading] = useState(true); // Add loading state
 
     const router = useRouter();
-
     useEffect(() => {
-        // Check if user is already logged in
+        const setAuthPersistence = async () => {
+            try {
+                await setPersistence(auth, browserLocalPersistence);
+            } catch (error) {
+                console.error("Error setting persistence", error);
+            }
+        };
+
+        setAuthPersistence();
+        
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                // Redirect if user is already logged in
-                router.back(); // Redirect to home or another page
+                // User is signed in. Redirect accordingly
+                const token = new URLSearchParams(window.location.search).get('token');
+                if (token) {
+                    auth.signInWithCustomToken(token)
+                        .then((userCredential) => {
+                            console.log("Signed in with custom token", userCredential.user);
+                            router.push('/'); // Redirect to your main page
+                        })
+                        .catch((error) => {
+                            console.error("Error signing in with custom token", error);
+                        });
+                } else {
+                    router.push('/'); // Redirect to your main page
+                }
             } else {
-                setLoading(false); // Set loading to false when done
+                setLoading(false);
             }
         });
 
@@ -86,9 +106,26 @@ const Login = () => {
                 firstName: user.email.split('@')[0],
             });
 
-            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
-            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
-        
+            const idToken = await user.getIdToken();
+            console.log('ID Token:', idToken);
+
+
+    // Send the ID token to the backend to create a session cookie
+            const response = await fetch('http://localhost:5000/api/createSessionCookie', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ idToken }),
+            });
+
+            if (response.ok) {
+                // Redirect to the subdomain after login and session cookie is created
+                console.log("api sent check it")
+              } else {
+                console.error('Failed to create session cookie');
+              }
+
+            // router.push('/');
+            // router.back();
 
             // router.push('/');
 
@@ -119,9 +156,24 @@ const Login = () => {
                 firstName: user.email.split('@')[0],
             });
 
-            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.trafyai.com`;
-            document.cookie = `authToken=${userCredential.user.uid}; path=/; domain=.blog.trafyai.com`;
+            const idToken = await user.getIdToken();
+            console.log('ID Token:', idToken);
 
+    // Send the ID token to the backend to create a session cookie
+            const response = await fetch('http://localhost:5000/api/createSessionCookie', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ idToken }),
+            credentials: 'include',
+            });
+
+            if (response.ok) {
+                // Redirect to the subdomain after login and session cookie is created
+                console.log("api sent")
+              } else {
+                console.error('Failed to create session cookie');
+              }
+            
 
             // router.back();
 
