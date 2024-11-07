@@ -28,8 +28,8 @@ const Signup = () => {
         // Check if user is already logged in
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                // Redirect if user is already logged in
-                router.push('/'); // Redirect to home or another page
+                // Redirect if user is already logged in and login process is completed
+                router.back(); // Redirect to home or another page
             } else {
                 setLoading(false); // Set loading to false when done
             }
@@ -147,7 +147,7 @@ const Signup = () => {
 
             
             const idtoken = await user.getIdToken();
-            // console.log("User ID Token:", idtoken);
+            console.log("User ID Token:", idtoken);
     
             // Check if the user data already exists in the Firebase Realtime Databas
            

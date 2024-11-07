@@ -106,7 +106,7 @@ const Enroll = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          amount: cartDetails?.fee,
+          amount: cartDetails?.totalAmount,
           name: cartDetails?.courseHeading,
           description: cartDetails?.courseDescription,
         }),
@@ -209,7 +209,8 @@ const sendNotificationEmail = async (paymentStatus, email) => {
 
   const { courseHeading, courseDescription, rating, fee } = cartDetails;
 
-  
+  const totalAmount = Number(fee) + (Number(fee) * 0.18);
+
 
   return (
     <div className='enroll'>
@@ -271,7 +272,19 @@ const sendNotificationEmail = async (paymentStatus, email) => {
                 </select>
               </div>
               <div className='enroll-course-payment'>
-                <p>₹{fee}</p>
+              <div className='enroll-course-payment-contents'>
+                  <h3>Subtotal</h3>
+                  <p>₹{fee}</p>
+                </div>
+                <div className='enroll-course-payment-contents'>
+                  <h3>GST</h3>
+                  <p>18%</p>
+                </div>
+                <hr />
+                <div className='enroll-course-payment-contents'>
+                  <h3>Total Amount</h3>
+                  <h5>₹{totalAmount}</h5>
+                </div>
                 <button type='submit'>Enroll now</button>
               </div>
             </form>
