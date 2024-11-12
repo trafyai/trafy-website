@@ -113,8 +113,8 @@ const Enroll = () => {
   
 
     try {
-      // Step 1: Create PhonePe order instead of Razorpay
-      const res = await fetch('http://localhost:5000/api/phonepe/create-order', {
+      // Step 1: Create Razorpay order
+      const res = await fetch('http://localhost:5000/api/createOrder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -177,7 +177,7 @@ const storeFormDataInFirebase = async (paymentStatus) => {
 // New function to send notification email after payment
 const sendNotificationEmail = async (paymentStatus, email) => {
     try {
-      const response = await fetch('http://localhost:5000/api/sendPaymentEmail', {
+      const response = await fetch('https://trafywebsite-backend-865611889264.us-central1.run.app/api/sendPaymentEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -212,7 +212,7 @@ const sendNotificationEmail = async (paymentStatus, email) => {
         </div>
 
         <div className='enroll-content'>
-          <div className="course-enquiry-form-contents">
+          <div className="course-enquiry-form-contents-enroll">
             <form className="enquiryform" onSubmit={handleSubmit} autoComplete="off">
               <div className="enquiryname">
                 <div className="enquiryfname">
@@ -263,7 +263,7 @@ const sendNotificationEmail = async (paymentStatus, email) => {
                   <option value="other">Other</option>
                 </select>
               </div>
-              <div className='course-payment'>
+              <div className='enroll-course-payment'>
                 <p>₹{fee}</p>
                 <button type='submit'>Enroll now</button>
               </div>

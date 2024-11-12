@@ -18,6 +18,6 @@ export default function robots() {
         "/self-paced-test"
       ],
     },
-    sitemap: "https://trafyai.com/sitemap.xml",
+    sitemap: "https://trafy.ai/sitemap.xml",
   };
 }

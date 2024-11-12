@@ -32,13 +32,10 @@
     .course-checkout{
         width: 50%;
     }
-    .course-enquiry-form-contents{
-        width: 50%;
-    }
 }
 
 
-.course-enquiry-form-contents {
+.course-enquiry-form-contents-enroll {
     width: 50%;
     background: var(--trafy-white);
     border-radius: 12px;
@@ -243,9 +240,14 @@
     font-family: var(--p-font);
 }
 
+@media only screen and (max-width: 1200px){
+    .course-enquiry-form-contents-enroll {
+        width: 90%;
+    }
 
+}
 @media only screen and (max-width: 600px) {
-    .course-enquiry-form-contents {
+    .course-enquiry-form-contents-enroll {
         width: 90%;
     }
 
@@ -255,7 +257,7 @@
 }
 
 @media only screen and (max-width: 400px) {
-    .course-enquiry-form-contents {
+    .course-enquiry-form-contents-enroll {
         padding: 24px;
     }
 
@@ -263,7 +265,7 @@
         gap: 0.5rem;
     }
 
-    .course-enquiry-form-contents {
+    .course-enquiry-form-contents-enroll {
         width: 95%;
     }
 
@@ -311,6 +313,7 @@
     font-family: var(--p-font);
     font-weight: 400;
     color: var(--p-black);
+    line-height: 140%;
 }
 .course-rating p{
     font-size: 14px;
@@ -324,18 +327,18 @@
     font-weight: 600;
     color: var(--h-black);
 }
-.course-payment{
+.enroll-course-payment{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.course-payment p{
+.enroll-course-payment p{
     font-size: 22px;
     font-family: var(--h-font);
     font-weight: 600;
     color: var(--h-black);
 }
-.course-payment button {
+.enroll-course-payment button {
     width: 100%;
     padding: 12px 32px;
     font-size: 16px;
@@ -348,7 +351,37 @@
     margin-top: 8px;
 }
 
-.course-payment button:hover {
+.enroll-course-payment button:hover {
     background-color: inherit;
     color: var(--trafy-black);
+}
+
+@media only screen and (max-width:1024px){
+    .enroll-content{
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+    .course-enquiry-form-contents-enroll, .course-details{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:600px){
+    .course-enquiry-form-contents-enroll, .course-details{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:400px){
+    .enroll-container{
+        width: 90%;
+    }
+    .course-details{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .course-enquiry-form-contents-enroll{
+        padding: 0px;
+    }
+    .course-rating{
+        display: none;
+    }
 }
