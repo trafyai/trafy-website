@@ -172,7 +172,7 @@ const handleLogOut = async () => {
             <Link
               href=" http://localhost:3001"
               className="menu-resources"
-              onClick={() => handleNavigation("https://blog.trafyai.com")}
+              onClick={() => handleNavigation("https://blog.trafy.ai")}
             >
               Resources
             </Link>
@@ -260,7 +260,7 @@ const handleLogOut = async () => {
                 <Link
                   href="http://localhost:3001"
                   className="menu-resources"
-                  onClick={() => handleNavigation("https://blog.trafyai.com")}
+                  onClick={() => handleNavigation("https://blog.trafy.ai")}
                 >
                   Resources
                 </Link>
