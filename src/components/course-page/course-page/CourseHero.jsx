@@ -222,7 +222,7 @@ export default function CourseHero(props) {
             setCartDetails(props);
 
             // Navigate to the enroll page
-            router.push('/enroll');
+            router.push(`/enroll`);
         } else {
             // If user is not logged in, redirect to the login page
             router.push('/login'); // Assuming your login page is at /login

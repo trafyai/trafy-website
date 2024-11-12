@@ -33,6 +33,8 @@ const Header = () => {
       window.removeEventListener("popstate", handlePopState);
     };
   }, []);
+
+  
   
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -86,16 +88,59 @@ const Header = () => {
     setHover(!hover);
   };
 
-  const handleLogOut = async () => {
-    try {
-      await logOut();
-      setHover(false);
+//   const handleLogOut = async () => {
+//     try {
+//         // Call the logout function
+//         await logOut();
+        
+//         // Optionally reset hover state or other UI elements
+//         setHover(false);
+
+//         // Make a request to invalidate the session cookie on the backend
+//         const response = await fetch('http://localhost:5000/api/createSessionCookie', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify({ idToken: null }),  // Ensure your backend handles this case correctly
+//         });
+
+//         // Check if the response is OK
+//         if (!response.ok) {
+//             throw new Error('Failed to invalidate session cookie');
+//         }
+
+//         // Redirect to home page (choose either `router.push` or `router.reload`)
+//         router.push("/");
+//     } catch (error) {
+//         console.error('Error during logout:', error);
+//     }
+// };
+
+const handleLogOut = async () => {
+  try {
+      // Call the logout function
+      await logOut();  // Sign out the user
+
+      // Notify the backend to clear the session cookie
+      const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/clearSessionCookie', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ clearSession: true }),  // Indicate the session should be cleared
+      });
+
+      if (!response.ok) {
+          throw new Error('Failed to clear session cookie');
+      }
+
+      // Redirect to home page
       router.push("/");
-      router.reload();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  } catch (error) {
+      console.error('Error during logout:', error);
+  }
+};
 
   return (
     <div className="navbar">
@@ -124,9 +169,9 @@ const Header = () => {
               Masterclass
             </Link>
             <Link
-              href="http://localhost:3001"
+              href="https://blog.trafy.ai/"
               className="menu-resources"
-              onClick={() => handleNavigation("http://localhost:3001")}
+              onClick={() => handleNavigation("https://blog.trafy.ai/")}
             >
               Resources
             </Link>
@@ -214,7 +259,7 @@ const Header = () => {
                 <Link
                   href="https://blog.trafy.ai/"
                   className="menu-resources"
-                  onClick={() => handleNavigation("https://blog.trafy.ai/")}
+                  onClick={() => handleNavigation("https://blog.trafyai.com")}
                 >
                   Resources
                 </Link>
@@ -279,7 +324,7 @@ const Header = () => {
                       <div className=""
                         style={{
                           width: "28px",
-                          height: "max-content",
+                          height: "2px",
                           borderRadius: "100%",
                           backgroundColor: "#f8f8f8",
                           display: "flex",

@@ -100,21 +100,9 @@ const Enroll = () => {
       return;
     }
 
-    const handlePaymentSuccess = (response) => {
-      // Check if the payment was successful
-      if (response.status === 'success') {
-          // Redirect to the desired URL without query parameters
-          window.location.href = "http://localhost:3000/courses/responsive-ui-designs";
-      } else {
-          // Handle failure (redirect to failure page or show an error message)
-          window.location.href = "http://localhost:3000/payment-failure";
-      }
-  };
-  
-
     try {
       // Step 1: Create Razorpay order
-      const res = await fetch('http://localhost:5000/api/createOrder', {
+      const res = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createOrder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -125,29 +113,48 @@ const Enroll = () => {
       });
 
       const data = await res.json();
-      console.log("Response data:", data);
-      
-      // Check if response is successful based on msg property
-      if (data.msg === "OK") {
-          // Redirect the user to PhonePe payment URL
-          window.location.href = data.url; // Use the correct URL property\
 
-          const paymentStatus = "success"; // or "failed", based on your logic
+      if (data.success && razorpayScriptLoaded) {
+        const options = {
+          key: data.key_id,
+          amount: data.amount,
+          currency: "INR",
+          name: data.product_name,
+          description: data.description,
+          order_id: data.order_id,
+          handler: async function (response) {
+            // Step 2: On successful payment
+            const paymentStatus = "success";
+            await storeFormDataInFirebase(paymentStatus);
+            await sendNotificationEmail(paymentStatus, email); // Send notification email
+            alert("Payment Successful");
+            window.location.reload();
+          },
+          prefill: {
+            contact: formData.phone,
+            name: `${formData.fname} ${formData.lname}`,
+            email: formData.email,
+          },
+          theme: { color: "#2300a3" },
+          image: 'https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/trafy%20icon.png?alt=media&token=a14b5cd3-febe-4f10-90d4-9f2073646012',
+        };
 
-          // Call the handlePaymentSuccess function here based on the payment result
-          handlePaymentSuccess({ status: paymentStatus });
-
-          // Call functions to store data and send notification
+        const razorpayInstance = new window.Razorpay(options);
+        razorpayInstance.on('payment.failed', async function (response) {
+          // Step 3: On payment failure
+          const paymentStatus = "failed";
           await storeFormDataInFirebase(paymentStatus);
-          await sendNotificationEmail(paymentStatus, email);
-          
+          await sendNotificationEmail(paymentStatus, email); // Send notification email
+          alert("Payment Failed");
+        });
+
+        razorpayInstance.open();
       } else {
-          console.error("Error data:", data);
-          throw new Error("PhonePe order creation failed.");
+        throw new Error("Razorpay order creation failed.");
       }
     } catch (error) {
-        console.error("Error processing the payment:", error);
-        setErrorMessages({ ...errorMessages, form: "Error processing the payment. Please try again later." });
+      console.error("Error processing the payment:", error);
+      setErrorMessages({ ...errorMessages, form: "Error processing the payment. Please try again later." });
     }
   };
 
@@ -177,7 +184,7 @@ const storeFormDataInFirebase = async (paymentStatus) => {
 // New function to send notification email after payment
 const sendNotificationEmail = async (paymentStatus, email) => {
     try {
-      const response = await fetch('https://trafywebsite-backend-865611889264.us-central1.run.app/api/sendPaymentEmail', {
+      const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/sendPaymentEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -212,7 +219,7 @@ const sendNotificationEmail = async (paymentStatus, email) => {
         </div>
 
         <div className='enroll-content'>
-          <div className="course-enquiry-form-contents-enroll">
+          <div className="course-enquiry-form-contents">
             <form className="enquiryform" onSubmit={handleSubmit} autoComplete="off">
               <div className="enquiryname">
                 <div className="enquiryfname">

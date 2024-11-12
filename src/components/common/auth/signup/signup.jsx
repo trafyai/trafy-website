@@ -107,7 +107,7 @@ const Signup = () => {
 
             router.back();
 
-            const response = await fetch('http://localhost:5000/api/createSessionCookie', {
+            const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ const Signup = () => {
             }
         }
     };
-    
+
     const handleGoogleSignIn = async () => {
         try {
             const provider = new GoogleAuthProvider();
@@ -162,7 +162,7 @@ const Signup = () => {
             console.log('Google Sign-In successful and user data stored:', user);
             router.back();
 
-            const response = await fetch('http://localhost:5000/api/createSessionCookie', {
+            const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -191,14 +191,10 @@ const Signup = () => {
             }
         }
     };
-
     const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
+        setShowPassword(prevShowPassword => !prevShowPassword);
     };
 
-    if (loading) {
-        return <p>Loading...</p>; // Display loading state while checking authentication
-    }
 
     return (
         <div className="signup">
