@@ -3,12 +3,27 @@ import React,{useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MasterClassEnquiryForm from '@components/common/auth/masterclass-form/masterClassEnquiry';
-
+import { useRouter } from "next/navigation";
+import { UserAuth } from "@context/AuthContext";
+import { useCart } from "@context/CartContext";
 
 export default function CoursePayment(props){
     const [enquiry,setEnquiry]= useState(false);
+    const { user, logOut, loading } = UserAuth();
+    const { setCartDetails } = useCart();
+    const router = useRouter();
+
     function showEnquiry(){
-        setEnquiry(!enquiry);
+        if (user) {
+            // If user is logged in, show the enquiry form
+            setCartDetails(props);
+
+            // Navigate to the enroll page
+            router.push(`/enroll`);
+        } else {
+            // If user is not logged in, redirect to the login page
+            router.push('/login'); // Assuming your login page is at /login
+        }
     }
 
     return(

@@ -209,7 +209,8 @@ const sendNotificationEmail = async (paymentStatus, email) => {
 
   const { courseHeading, courseDescription, rating, fee } = cartDetails;
 
-  const totalAmount = Number(fee) + (Number(fee) * 0.18);
+  // const totalAmount = Number(fee) + (Number(fee) * 0.18);
+  const totalAmount = Math.floor(Number(fee) + (Number(fee) * 0.18));
 
 
   return (

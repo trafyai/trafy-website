@@ -66,7 +66,7 @@ export const dmCourse = [
         bgColor: "#fad5a4",
         label: {
             one: "PPC’s",
-            two: " Retarget",
+            two: "Retarget",
             three: "Email",
             four: "Campaigns",
         },
@@ -80,17 +80,36 @@ export const dmCourse = [
 
 export const aiCourse = [
     {
-        title: "Artificial Intelligence",
-        description: "Dive into emerging AI, learn core principles, its applications, use cases, and create AI projects.",
+        id:"5-days-gen-ai-crash-course",
+        title: "5 Days Generative AI Crash Course",
+        description: "Dive into 5 day certification program in Python and LLMs, by building a GEN-AI chatbot.",
+        bgColor: "#cefbdb",
+        "label": {
+            "one": "Python Intermediate",
+            "two": "Large Language Models",
+            "three": "Gen AI Chatbot"
+        },
+        rating: "4.7",
+        level: "Certification",
+        duration: "5 days",
+        halfstar: Halfstar,
+        fullstar: Fullstar
+    },
+    {
+        id:"advanced-generative-ai-certification-program",
+        title: "Advanced Generative AI Certification Program",
+        description: "Intensive 12-week AI program focused on data science, machine learning, and deep learning with practical projects.",
         bgColor: "#cefbdb",
         label: {
             one: "Machine Learning",
             two: "Deep Learning",
-            three: "Neural Network"
+            three: "Natural Neural Network",
+            four: "NLP",
+            five:"Data Science",
         },
-        rating: "4.7",
+        rating: "4.9",
         level: "Certification",
-        duration: "8 weeks",
+        duration: "12 weeks",
         halfstar: Halfstar,
         fullstar: Fullstar
     },

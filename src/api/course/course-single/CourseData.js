@@ -193,7 +193,82 @@ const CourseHeroData=[
         fee:"60000",
         formtype:"uiuxCourse",
         courseName:"UIUX-spatial-ui-designs",
+    },
+    {
+        "id": "5-days-gen-ai-crash-course",
+        "bgColor": "#e6f7ff",
+        "category": "AI",
+        "popularity": "Trending",
+        "shareIcon": "Share",
+        "courseHeading": "5 Days GEN-AI Crash Course",
+        "courseDescription": "Master Python and Large Language Models with hands-on projects.",
+        "rating": "4.7",
+        "ratingIcon": RatingStar,
+        "rate": "799 /",
+        "initialRate": "10,000",
+        "enrolled": "200+ enrolled last week",
+        "whatsappIcon": Whatsapp,
+        "facebookIcon": Facebook,
+        "linkedinIcon": Linkedin,
+        "xIcon": X,
+        "closeIcon": close,
+        "platform": "Learn",
+        "iphoneIcon": Phone,
+        "macIcon": Macbook,
+        "tabIcon": Tab,
+        "visionIcon": Vision,
+        "watchIcon": Watch,
+        "startDateH": "Start date",
+        "startDate": "Available now",
+        "levelH": "Level",
+        "level": "Certification",
+        "durationH": "Duration",
+        "duration": "5 days",
+        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-AdvanceEnquiryFormData.json",
+        "formCourse": "AI Certification",
+        demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-AdvanceFreeDemoForm.json",
+        "fee": "799",
+        "formtype": "genAICourse",
+        "courseName": "gen-ai-crash-course"
+    },
+    {
+        "id": "advanced-generative-ai-certification-program",
+        "bgColor": "#e6f7ff",
+        "category": "AI/ML",
+        "popularity": "Trending",
+        "shareIcon": Share,
+        "courseDescription": "Master advanced AI concepts including machine learning, deep learning, and natural language processing through hands-on projects and career guidance.",
+        "rating": "4.8",
+        "ratingIcon": RatingStar,
+        "rate": "60,000 /",
+        "initialRate": "1,45,000",
+        "enrolled": "200+ enrolled last week",
+        "whatsappIcon": Whatsapp,
+        "facebookIcon": Facebook,
+        "linkedinIcon": Linkedin,
+        "xIcon": X,
+        "closeIcon": close,
+        "platform": "Learn",
+        "iphoneIcon": Phone,
+        "macIcon": Macbook,
+        "tabIcon": Tab,
+        "visionIcon": Vision,
+        "watchIcon": Watch,
+        "startDateH": "Start date",
+        "startDate": "Available now",
+        "levelH": "Level",
+        "level": "Advanced Certification",
+        "durationH": "Duration",
+        "duration": "12 weeks",
+        "formLink": "https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-AdvanceEnquiryFormData.json",
+        "formCourse": "Advanced Generative AI Certification",
+        "demoLink": "https://freedemo-form-default-rtdb.firebaseio.com/UIUX-AdvanceFreeDemoForm.json",
+        "fee": "60000",
+        "formtype": "advancedGenAICourse",
+        "courseName": "advanced-gen-ai-certification"
     }
+    
+    
 ]
 
 
@@ -293,6 +368,48 @@ const CourseAboutData=[
             "Designing for Conversation AI’s"
         ]
     },
+    {
+        "id": "5-days-gen-ai-crash-course",
+        "bgColor": "#e6f7ff",
+        "aboutH": "About the Course",
+        "description": "Our 5-day certification program in Python and LLMs builds a strong programming foundation and practical skills in AI, featuring hands-on projects like a Gen AI chatbot for portfolio enhancement. You'll gain proficiency in integrating Large Language Models with Python applications and learn best practices for deploying AI solutions.",
+        // "toolsH": "Tools Covered",
+        // toolsimg:[
+        //     {url:Figma,alt:"Figma"},
+        //     {url:Miro,alt:"Miro"},
+        //     {url:Chatgpt,alt:"Chatgpt"},
+        //     {url:Gemini,alt:"Gemini"},
+        //     {url:Framer,alt:"Framer"} 
+
+        // ],
+        "skillsH": "Skills you will Master",
+        "skillP": [
+            "Python Programming",
+            "Data Types and Structures",
+            "Conditional Statements and Loops",
+            "Functions and Classes",
+            "LLM Integration",
+            "Gen AI Chatbot Development"
+        ]
+    },
+    {
+        "id": "advanced-generative-ai-certification-program",
+        "bgColor": "#e6f7ff",
+        "aboutH": "About the Course",
+        "description": "Our 12-week Advanced Generative AI Certification Program offers an in-depth exploration of machine learning, deep learning, and natural language processing. You will gain hands-on experience with Python, LLMs, and advanced AI models through industry-relevant projects, preparing you for a successful career in AI.",
+        "skillsH": "Skills you will Master",
+        "skillP": [
+            "Python Programming",
+            "Data Types and Structures",
+            "Machine Learning Fundamentals",
+            "Deep Learning with Neural Networks",
+            "Natural Language Processing (NLP)",
+            "Generative AI Models and Techniques",
+            "Data Visualization",
+        ]
+    }
+    
+    
 ]
 
 
@@ -442,6 +559,136 @@ const CourseSyllabusData=[
          
         ]
     },
+    {
+        "id": "5-days-gen-ai-crash-course",
+        "bgColor": "#e6f7ff",
+        "viewMore": "#6d28d9",
+        "hoverColor": "#1c1623",
+        "heading": "Course Syllabus",
+        "dropIcon": "ExpandMore",
+        "syllabus": [
+            {
+                "title": "Getting Started with Python",
+                "contents": "Introduction to Python, installation process, and understanding IDEs. Write 'Hello World' and explore basics such as syntax, variables, data types, data structures, loops, functions, arrays, and classes."
+            },
+            {
+                "title": "Advanced Python Concepts",
+                "contents": "Dive into core Python topics like conditional statements, loops, classes, objects, and practice exercises to solidify your foundation in Python programming."
+            },
+            {
+                "title": "Getting Started with Large Language Models (LLMs)",
+                "contents": "Introduction to LLMs, installation of LLM tools (e.g., Ollama), and working with them on your local machine to understand their potential in AI projects."
+            },
+            {
+                "title": "Integrating LLMs with Python",
+                "contents": "Learn how to integrate LLMs within Python applications on your local machine, including best practices for combining LLM capabilities with Python code."
+            },
+            {
+                "title": "Building Your Own Gen AI Chatbot",
+                "contents": "Develop a Gen AI chatbot from scratch using Python and LLMs, complete with deployment and review sessions to refine and showcase your project."
+            }
+        ]
+    },
+    {
+        "id": "advanced-generative-ai-certification-program",
+        "bgColor": "#e6f7ff",
+        "viewMore": "#6d28d9",
+        "hoverColor": "#1c1623",
+        "heading": "Course Syllabus",
+        "dropIcon": "ExpandMore",
+        "syllabus": [
+            {
+                "title": "Getting Started with Python",
+                "contents": "Introduction to Python, installation process, and understanding IDEs. Write 'Hello World' and explore basics such as syntax, variables, data types, data structures, loops, functions, arrays, and classes."
+            },
+            {
+                "title": "Advanced Python Concepts",
+                "contents": "Dive into core Python topics like conditional statements, loops, classes, objects, and practice exercises to solidify your foundation in Python programming."
+            },
+            {
+                "title": "Introduction to Data Science",
+                "contents": "Learn the basics of data science, including data types, libraries such as Pandas, NumPy, and Scikit-Learn, and understanding their application in AI projects."
+            },
+            {
+                "title": "Data Processing and Visualization",
+                "contents": "Get hands-on experience with data cleaning, manipulation, and visualization using libraries like Pandas, Matplotlib, and Seaborn. Explore how to handle missing data and create meaningful visualizations."
+            },
+            {
+                "title": "Machine Learning Algorithms",
+                "contents": "Introduction to supervised and unsupervised learning algorithms, including regression, classification, clustering, and decision trees. Learn how to apply machine learning techniques using Scikit-Learn."
+            },
+            {
+                "title": "Deep Learning and Neural Networks",
+                "contents": "Study the fundamentals of deep learning, including neural networks, Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and their application in tasks like image and text processing."
+            },
+            {
+                "title": "Natural Language Processing (NLP)",
+                "contents": "Learn the basics of NLP, including text preprocessing, tokenization, and using pre-trained models like GPT for text generation and other NLP tasks."
+            },
+            {
+                "title": "Generative AI and GANs",
+                "contents": "Explore Generative Adversarial Networks (GANs) and their use in generating images, text, and other media. Build and train a GAN model using frameworks like TensorFlow or PyTorch."
+            },
+            {
+                "title": "Large Language Models (LLMs)",
+                "contents": "Understand the theory and application of LLMs, including GPT and other transformer-based models. Learn how to fine-tune and deploy LLMs in your own projects."
+            },
+            {
+                "title": "Introduction to Deep Learning",
+                "contents": "Understand the principles behind deep learning, including artificial neural networks, and learn to implement deep learning models with Python libraries like TensorFlow and PyTorch."
+            },
+            {
+                "title": "Artificial Neural Networks (ANNs)",
+                "contents": "Study the architecture of ANNs, including training processes, forward and backward propagation, and activation functions. Learn how to implement a neural network from scratch."
+            },
+            {
+                "title": "Convolutional Neural Networks (CNNs)",
+                "contents": "Learn about CNNs and their application in image classification and computer vision. Implement CNN models using TensorFlow and PyTorch on datasets like MNIST and CIFAR-10."
+            },
+            {
+                "title": "Recurrent Neural Networks (RNNs)",
+                "contents": "Explore RNNs and their use in time-series data, text generation, and natural language processing. Understand Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) networks."
+            },
+            {
+                "title": "Generative Adversarial Networks (GANs)",
+                "contents": "Dive into GANs, including theory, architecture, and real-world applications. Build GANs using frameworks like TensorFlow and Keras."
+            },
+            {
+                "title": "Introduction to Natural Language Processing (NLP)",
+                "contents": "Learn how to preprocess text data, perform tokenization, and apply NLP techniques for text analysis, including sentiment analysis, text classification, and entity recognition."
+            },
+            {
+                "title": "Text Preprocessing and Tokenization",
+                "contents": "Explore how to clean, normalize, and tokenize text data using Python libraries like NLTK, SpaCy, and Hugging Face."
+            },
+            {
+                "title": "Transformers and GPT Models",
+                "contents": "Understand transformer architecture, including attention mechanisms and multi-head attention. Learn how to fine-tune pre-trained models like GPT for text generation and other NLP tasks."
+            },
+            {
+                "title": "Text Generation with LLMs",
+                "contents": "Explore techniques for generating human-like text using LLMs like GPT-3, including text completion, summarization, and creative writing applications."
+            },
+            {
+                "title": "Building Your Own Gen AI Chatbot",
+                "contents": "Develop a Gen AI chatbot from scratch using Python and LLMs, complete with deployment and review sessions to refine and showcase your project."
+            },
+            {
+                "title": "Data Visualization and Plotting",
+                "contents": "Learn to create various types of plots using Matplotlib, Seaborn, and Plotly, including line charts, bar plots, scatter plots, and heatmaps."
+            },
+            {
+                "title": "Exploring Machine Learning Pipelines",
+                "contents": "Learn how to build machine learning pipelines using Scikit-Learn, including data preprocessing, model training, and hyperparameter tuning."
+            },
+            {
+                "title": "AI Model Evaluation and Tuning",
+                "contents": "Understand how to evaluate AI models using metrics like accuracy, precision, recall, and F1-score. Learn how to optimize models using techniques like cross-validation and grid search."
+            }
+        ]
+    }
+    
+    
 ]
 
 
@@ -562,6 +809,54 @@ const CourseProjectData=[
             },
          ]
     },
+    {
+        "id": "5-days-gen-ai-crash-course",
+        "heading": "Projects",
+        "bgColor": "#e6f7ff",
+        "project": [
+
+            {
+                "title": "Chatbot with LLM Integration",
+                "description": "Design and build a chatbot that leverages LLM technology to provide user-specific responses and simulate real-time conversations.",
+                "bg_color": ""
+            },
+
+        ]
+    },
+    {
+        "id": "advanced-generative-ai-certification-program",
+        "heading": "Projects",
+        "bgColor": "#d9cefb",
+        "project": [
+            {
+                "title": "Generative AI Chatbot",
+                "description": "Build an AI-powered chatbot using Python and Large Language Models (LLMs). The chatbot will handle user queries with natural responses and can be deployed on various platforms.",
+                "bg_color": "#f0f8ff"
+            },
+            {
+                "title": "Data Visualization Dashboard",
+                "description": "Create an interactive and dynamic data visualization dashboard using Python and libraries like Matplotlib, Seaborn, and Plotly. The dashboard will display insights from data analysis on a web interface.",
+                "bg_color": "#f4f4f4"
+            },
+            {
+                "title": "AI-Driven Content Generation Platform",
+                "description": "Develop a content generation platform that uses GPT-3 for creating articles, blogs, or other types of content based on user input. The system will leverage NLP for automatic text generation.",
+                "bg_color": "#d1e8ff"
+            },
+            {
+                "title": "Generative Adversarial Network (GAN) Image Generation",
+                "description": "Create a project that uses GANs to generate realistic images from random noise. The project will explore image generation techniques and handle common challenges like mode collapse.",
+                "bg_color": "#f3f3f3"
+            },
+            {
+                "title": "Time-Series Analysis and Forecasting App",
+                "description": "Develop an app that uses deep learning models, such as LSTMs, for time-series forecasting. This project will focus on predicting future trends based on historical data.",
+                "bg_color": "#f1e6f6"
+            }
+        ]
+    }
+    
+    
 ]
 
 const CourseReviewData=[
@@ -609,6 +904,46 @@ const CourseReviewData=[
             
         ]
     },
+    {
+        "id": "5-days-gen-ai-crash-course",
+        "bgColor": "#e6f7ff",
+        "heading": "Reviews",
+        "review": [
+            {
+                "name": "Aarav Patel",
+                "content": "This course gave me a solid understanding of Python and Large Language Models. The instructors made complex topics easy to grasp with hands-on projects that helped me gain confidence in coding and AI. Perfect for beginners looking to dive into AI!"
+            },
+            {
+                "name": "Neha Verma",
+                "content": "I was a bit intimidated by the idea of working with LLMs, but this course made it accessible. The practical exercises were especially helpful, and now I can build a basic chatbot on my own. Highly recommended for anyone interested in AI."
+            },
+            {
+                "name": "Rohit Sharma",
+                "content": "Excellent crash course! The Python basics were covered well, and the progression to LLMs was smooth. I appreciated the project-based approach, which allowed me to apply what I learned immediately. Great value for a 5-day program."
+            }
+        ]
+    },
+    {
+        "id": "advanced-generative-ai-certification-program",
+        "bgColor": "#e6f7ff",
+        "heading": "Reviews",
+        "review": [
+            {
+                "name": "Isha Reddy",
+                "content": "This program gave me a comprehensive understanding of data science, deep learning, and AI. The hands-on projects helped me apply concepts like Python, LLMs, and GANs to real-world problems. The instructors were excellent, and the career support was invaluable. Highly recommend for anyone serious about advancing their AI skills!"
+            },
+            {
+                "name": "Vikram Mehta",
+                "content": "The Advanced Generative AI program exceeded my expectations. I was able to master complex topics like machine learning, NLP, and deep learning in a practical and structured manner. The mini and major projects enhanced my portfolio, and the placement guidance was a big plus. Worth every penny!"
+            },
+            {
+                "name": "Ananya Desai",
+                "content": "A game-changing course for anyone interested in AI. The combination of theory and practical application was perfect. I learned not just how to use Python and machine learning libraries but also how to deploy AI models effectively. The course also helped me build projects that showcased my skills. Excellent program!"
+            }
+        ]
+    }
+    
+    
 ]
 
 const CourseCertificateData=[
@@ -640,7 +975,21 @@ const CourseCertificateData=[
         heading:"Earn Industry Recognised Certificate",
         description:"Add this credential to your LinkedIn profile, resume, or CV to showcase your expertise. Share your achievement on social media and during performance reviews to underscore your commitment to professional growth and success."
     },
-
+    {
+        "id": "5-days-gen-ai-crash-course",
+        "bgColor": "#e6f7ff",
+        // "image": "genai-certificate", 
+        "heading": "Earn Industry Recognized Certificate",
+        "description": "Upon completing the course, you'll receive a certificate that showcases your expertise in Python and Large Language Models. Add this credential to your LinkedIn profile, resume, or CV, and share your achievement to highlight your proficiency in AI and Python development."
+    },
+    {
+        "id": "advanced-generative-ai-certification-program",
+        "bgColor": "#e6f7ff",
+        "heading": "Earn Industry Recognized Certificate",
+        "description": "Upon completing the Advanced Generative AI Certification Program, you'll receive a certificate that highlights your proficiency in AI, machine learning, deep learning, and Python programming. This certification demonstrates your expertise in building advanced AI models, including Generative AI Chatbots, GANs, and LLMs. Showcase your skills to potential employers and stand out in the rapidly growing AI field by adding this credential to your LinkedIn profile, resume, or CV."
+    }
+    
+    
 ]
 
 const CoursePaymentData=[
@@ -823,7 +1172,101 @@ const CoursePaymentData=[
         }
     ]
 
-}
+},
+{
+    id:"5-days-gen-ai-crash-course",
+    "bgColor": "#e0f7fa",
+    "shadowColor": "0px 0px 41px -8px #80deea",
+    "feeH": "Course Fee",
+    "weeks": "5 days",
+    "start": "Starting at",
+    "rate": "INR 799 /",
+    "initialRate": "INR 10,000",
+    "sub": "Including",
+    "fee": "799",
+    "courseHeading": "5 Days GEN-AI Crash Course",
+
+    sublist:[
+        {list:"Lifetime access to course materials"},
+        {list:"Doubt clearing sessions"},
+        {list:"Career guidance and Mock Interviews"}
+    ],
+    paymentH:"Payment options",
+    payment:[
+        {heading:"UPI",
+        images:[
+            {image:Gpay,alt:"Gpay"},
+             {image:PhonePe,alt:"Phonepe"},
+             {image:Upi,alt:"Upi"}
+        ]
+    
+        },
+        {heading:"Card",
+        images:[
+             {image:Mastercard,alt:"Mastercard"},
+             {image:Rupay,alt:"Rupay"},
+             {image:Visa,alt:"Visa"}
+        ]
+    
+        },
+        {heading:"Wallet",
+        images:[
+             {image:Freecharge,alt:"Freecharge"},
+             {image:Mobikwik,alt:"Mobikwik"},
+             {image:Ola,alt:"Ola"},
+             {image:Jio,alt:"Jio"}
+        ]
+    
+        }
+    ]
+
+},
+{
+    "id": "advanced-generative-ai-certification-program",
+    "bgColor": "#e0f7fa",
+    "shadowColor": "0px 0px 41px -8px #80deea",
+    "feeH": "Course Fee",
+    "weeks": "12 weeks",
+    "start": "Starting at",
+    "rate": "INR 60,000 /",
+    "initialRate": "INR 1,45,000",
+    "sub": "Including",
+    "fee": "60000",
+    "courseHeading": "Advanced Generative AI Certification Program",
+    sublist:[
+        {list:"Lifetime access to course materials"},
+        {list:"Doubt clearing sessions"},
+        {list:"Career guidance and Mock Interviews"}
+    ],
+    paymentH:"Payment options",
+    payment:[
+        {heading:"UPI",
+        images:[
+            {image:Gpay,alt:"Gpay"},
+             {image:PhonePe,alt:"Phonepe"},
+             {image:Upi,alt:"Upi"}
+        ]
+    
+        },
+        {heading:"Card",
+        images:[
+             {image:Mastercard,alt:"Mastercard"},
+             {image:Rupay,alt:"Rupay"},
+             {image:Visa,alt:"Visa"}
+        ]
+    
+        },
+        {heading:"Wallet",
+        images:[
+             {image:Freecharge,alt:"Freecharge"},
+             {image:Mobikwik,alt:"Mobikwik"},
+             {image:Ola,alt:"Ola"},
+             {image:Jio,alt:"Jio"}
+        ]
+        }
+    ]
+},
+
 
 ]
 
@@ -918,6 +1361,59 @@ const CourseFaqData=[
         },
         ]
     },
+    {
+        "id": "5-days-gen-ai-crash-course",
+        "bgColor": "#f9f7ff",
+        "dropIcon": "ExpandMore",
+        "heading": "Frequently Asked Questions",
+        "faq": [
+            {
+                "title": "Who is this course for?",
+                "contents": "This course is ideal for those looking to gain practical skills in Python programming and AI, including beginners, aspiring developers, and AI enthusiasts."
+            },
+            {
+                "title": "Do I need prior experience in Python or AI?",
+                "contents": "No prior experience is required. The course is designed for beginners, covering everything from basic Python to advanced integration with Large Language Models."
+            },
+            {
+                "title": "What tools will I be using during the course?",
+                "contents": "You will be using Python, IDEs for development, LLM tools such as Ollama, and other related tools to integrate AI functionality into your applications."
+            },
+            {
+                "title": "Will I receive a certificate upon completion?",
+                "contents": "Yes, upon successful completion of the course, you will receive a certificate to showcase your skills and knowledge in Python and Large Language Models."
+            }
+        ]
+    },
+    {
+        "id": "advanced-generative-ai-certification-program",
+        "bgColor": "#f9f7ff",
+        "dropIcon": "ExpandMore",
+        "heading": "Frequently Asked Questions",
+        "faq": [
+            {
+                "title": "Is this course suitable for beginners?",
+                "contents": "This course is advanced level, but it covers Python basics and progresses to deep learning, NLP, and AI concepts, making it suitable for learners who have foundational programming skills and are looking to deepen their knowledge in AI."
+            },
+            {
+                "title": "Will I receive a certificate upon completion of the course?",
+                "contents": "Yes, upon successful completion of the course, you will receive an industry-recognized certificate that demonstrates your expertise in Python, AI, machine learning, and large language models (LLMs)."
+            },
+            {
+                "title": "Can I access the course materials after I finish the course?",
+                "contents": "Yes, you'll have lifetime access to all course materials, including video lectures, assignments, and resources, enabling you to revisit content whenever you need a refresher."
+            },
+            {
+                "title": "What career opportunities can I pursue after completing this course?",
+                "contents": "Upon completion of this course, you will be equipped to pursue roles like AI Developer, Data Scientist, Machine Learning Engineer, NLP Engineer, and other positions in the AI and tech industry."
+            },
+            {
+                "title": "Can I enroll in this course if I'm currently employed full-time?",
+                "contents": "Yes, this course is designed with flexible learning options to accommodate professionals with busy schedules. You can manage your learning alongside your job responsibilities."
+            }
+        ]
+    }
+    
 ]
 
 const CourseSimilarData=[
@@ -943,6 +1439,13 @@ const CourseSimilarData=[
             "responsive-ui-designs",
             "building-functional-ux",
             "spatial-ui-designs"
+        ]
+    },
+    {
+        id:"5-days-gen-ai-crash-course",
+        course:"aiCourse",
+        ids:[
+            "advanced-generative-ai-certification-program",
         ]
     }
 
