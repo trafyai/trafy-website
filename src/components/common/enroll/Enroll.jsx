@@ -102,11 +102,11 @@ const Enroll = () => {
 
     try {
       // Step 1: Create Razorpay order
-      const res = await fetch('https://trafywebsite-backend-865611889264.us-central1.run.app/api/createOrder', {
+      const res = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createOrder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          amount: cartDetails?.totalAmount,
+          amount: cartDetails?.fee,
           name: cartDetails?.courseHeading,
           description: cartDetails?.courseDescription,
         }),
@@ -184,7 +184,7 @@ const storeFormDataInFirebase = async (paymentStatus) => {
 // New function to send notification email after payment
 const sendNotificationEmail = async (paymentStatus, email) => {
     try {
-      const response = await fetch('https://trafywebsite-backend-865611889264.us-central1.run.app/api/sendPaymentEmail', {
+      const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/sendPaymentEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -209,9 +209,13 @@ const sendNotificationEmail = async (paymentStatus, email) => {
 
   const { courseHeading, courseDescription, rating, fee } = cartDetails;
 
+<<<<<<< HEAD
   // const totalAmount = Number(fee) + (Number(fee) * 0.18);
   const totalAmount = Math.floor(Number(fee) + (Number(fee) * 0.18));
 
+=======
+  
+>>>>>>> c45cfdfe5efc77be8e030c7c83ab23b5f7ef3b0f
 
   return (
     <div className='enroll'>
@@ -221,7 +225,7 @@ const sendNotificationEmail = async (paymentStatus, email) => {
         </div>
 
         <div className='enroll-content'>
-          <div className="course-enquiry-form-contents-enroll">
+          <div className="course-enquiry-form-contents">
             <form className="enquiryform" onSubmit={handleSubmit} autoComplete="off">
               <div className="enquiryname">
                 <div className="enquiryfname">
@@ -273,19 +277,7 @@ const sendNotificationEmail = async (paymentStatus, email) => {
                 </select>
               </div>
               <div className='enroll-course-payment'>
-              <div className='enroll-course-payment-contents'>
-                  <h3>Subtotal</h3>
-                  <p>₹{fee}</p>
-                </div>
-                <div className='enroll-course-payment-contents'>
-                  <h3>GST</h3>
-                  <p>18%</p>
-                </div>
-                <hr />
-                <div className='enroll-course-payment-contents'>
-                  <h3>Total Amount</h3>
-                  <h5>₹{totalAmount}</h5>
-                </div>
+                <p>₹{fee}</p>
                 <button type='submit'>Enroll now</button>
               </div>
             </form>

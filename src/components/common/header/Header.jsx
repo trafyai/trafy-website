@@ -119,29 +119,28 @@ const Header = () => {
 
 const handleLogOut = async () => {
   try {
-    // Call the logout function
-    await logOut(); // Sign out the user
+      // Call the logout function
+      await logOut();  // Sign out the user
 
-    // Notify the backend to clear the session cookie
-    const response = await fetch('http://localhost:5000/api/clearSessionCookie', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ clearSession: true }), // Indicate the session should be cleared
-    });
+      // Notify the backend to clear the session cookie
+      const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/clearSessionCookie', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ clearSession: true }),  // Indicate the session should be cleared
+      });
 
-    if (!response.ok) {
-      throw new Error('Failed to clear session cookie');
-    }
+      if (!response.ok) {
+          throw new Error('Failed to clear session cookie');
+      }
 
-    // Redirect to home page
-    router.push("/");
+      // Redirect to home page
+      router.push("/");
   } catch (error) {
-    console.error('Error during logout:', error);
+      console.error('Error during logout:', error);
   }
 };
-
 
   return (
     <div className="navbar">
@@ -170,9 +169,9 @@ const handleLogOut = async () => {
               Masterclass
             </Link> */}
             <Link
-              href=" http://localhost:3001"
+              href="https://blog.trafy.ai/"
               className="menu-resources"
-              onClick={() => handleNavigation("https://blog.trafy.ai")}
+              onClick={() => handleNavigation("https://blog.trafy.ai/")}
             >
               Resources
             </Link>
@@ -258,9 +257,9 @@ const handleLogOut = async () => {
                   Masterclass
                 </Link> */}
                 <Link
-                  href="http://localhost:3001"
+                  href="https://blog.trafy.ai/"
                   className="menu-resources"
-                  onClick={() => handleNavigation("https://blog.trafy.ai")}
+                  onClick={() => handleNavigation("https://blog.trafyai.com")}
                 >
                   Resources
                 </Link>
