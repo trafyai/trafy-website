@@ -134,6 +134,7 @@ const Login = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                     'Origin': 'https://trafy.ai'
                 },
                 body: JSON.stringify({ idToken: idtoken }),
             });
