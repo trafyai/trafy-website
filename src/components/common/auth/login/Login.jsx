@@ -87,8 +87,11 @@ const Login = () => {
 
             const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
                 method: 'POST',
+                credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Origin': 'https://trafy.ai'
                 },
                 body: JSON.stringify({ idToken: idtoken }),
             });
@@ -132,9 +135,11 @@ const Login = () => {
 
             const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
                 method: 'POST',
+                credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
-                     'Origin': 'https://trafy.ai'
+                    'Accept': 'application/json',
+                    'Origin': 'https://trafy.ai'
                 },
                 body: JSON.stringify({ idToken: idtoken }),
             });
