@@ -102,11 +102,11 @@ const Enroll = () => {
 
     try {
       // Step 1: Create Razorpay order
-      const res = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createOrder', {
+      const res = await fetch('https://trafywebsite-backend-865611889264.us-central1.run.app/api/createOrder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          amount: cartDetails?.fee,
+          amount: cartDetails?.totalAmount,
           name: cartDetails?.courseHeading,
           description: cartDetails?.courseDescription,
         }),
@@ -184,7 +184,7 @@ const storeFormDataInFirebase = async (paymentStatus) => {
 // New function to send notification email after payment
 const sendNotificationEmail = async (paymentStatus, email) => {
     try {
-      const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/sendPaymentEmail', {
+      const response = await fetch('https://trafywebsite-backend-865611889264.us-central1.run.app/api/sendPaymentEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -210,7 +210,7 @@ const sendNotificationEmail = async (paymentStatus, email) => {
   const { courseHeading, courseDescription, rating, fee } = cartDetails;
 
   // const totalAmount = Number(fee) + (Number(fee) * 0.18);
-  const totalAmount = Math.floor(Number(fee) + (Number(fee) * 0.18));
+const totalAmount = Math.floor(Number(fee) + (Number(fee) * 0.18));
 
 
   return (
@@ -221,7 +221,7 @@ const sendNotificationEmail = async (paymentStatus, email) => {
         </div>
 
         <div className='enroll-content'>
-          <div className="course-enquiry-form-contents">
+          <div className="course-enquiry-form-contents-enroll">
             <form className="enquiryform" onSubmit={handleSubmit} autoComplete="off">
               <div className="enquiryname">
                 <div className="enquiryfname">
@@ -273,7 +273,19 @@ const sendNotificationEmail = async (paymentStatus, email) => {
                 </select>
               </div>
               <div className='enroll-course-payment'>
-                <p>₹{fee}</p>
+              <div className='enroll-course-payment-contents'>
+                  <h3>Subtotal</h3>
+                  <p>₹{fee}</p>
+                </div>
+                <div className='enroll-course-payment-contents'>
+                  <h3>GST</h3>
+                  <p>18%</p>
+                </div>
+                <hr />
+                <div className='enroll-course-payment-contents'>
+                  <h3>Total Amount</h3>
+                  <h5>₹{totalAmount}</h5>
+                </div>
                 <button type='submit'>Enroll now</button>
               </div>
             </form>

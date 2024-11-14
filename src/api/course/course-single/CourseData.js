@@ -237,6 +237,7 @@ const CourseHeroData=[
         "category": "AI/ML",
         "popularity": "Trending",
         "shareIcon": Share,
+        "courseHeading":"Advanced Generative AI Certification Program",
         "courseDescription": "Master advanced AI concepts including machine learning, deep learning, and natural language processing through hands-on projects and career guidance.",
         "rating": "4.8",
         "ratingIcon": RatingStar,
