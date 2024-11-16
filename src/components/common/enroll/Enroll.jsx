@@ -82,10 +82,31 @@ const Enroll = () => {
     setFormData({ ...formData, state: val });
   };
 
+  // useEffect(() => {
+  //   if (cartDetails && cartDetails.fee) {
+  //     const totalAmount = Math.floor(Number(cartDetails?.fee || 0) * 1.18)*100;
+  //     cartDetails.totAmount = totalAmount; // Ensure this updates before submitting
+  //   }
+  // }, [cartDetails]);
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { fname, lname, email, phone } = formData;
+      const totalAmount = Math.floor((Number(fee) + (Number(fee) * 0.18)) * 100); // Convert to paise
+      cartDetails.totAmount = totalAmount;
+
+
+    console.log("Amount in paise to send:", totalAmount); // Should be in paise
+
+
+    const { courseHeading = "", courseDescription = "", type = "other" } = cartDetails || {};  // Ensure a default 'type'
+  
+  if (!totalAmount || !courseHeading || !courseDescription) {
+    console.error("Order creation data is missing.");
+    return;
+  }
 
     const newErrorMessages = {
       fname: !fname ? "Please enter your first name." : "",
@@ -102,15 +123,25 @@ const Enroll = () => {
 
     try {
       // Step 1: Create Razorpay order
-      const res = await fetch('https://trafywebsite-backend-865611889264.us-central1.run.app/api/createOrder', {
+      const res = await fetch('https://trafywebsite-backend-255821839155.us-central1.run.app/api/createOrder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          amount: cartDetails?.totalAmount,
-          name: cartDetails?.courseHeading,
-          description: cartDetails?.courseDescription,
+          amount: totalAmount,
+          name: courseHeading,
+          description: courseDescription,
         }),
+        
       });
+
+      console.log("cartDetails:", cartDetails);
+
+      console.log({
+        amount: totalAmount,
+        name: courseHeading,
+        description: courseDescription,
+});
+
 
       const data = await res.json();
 
@@ -184,7 +215,7 @@ const storeFormDataInFirebase = async (paymentStatus) => {
 // New function to send notification email after payment
 const sendNotificationEmail = async (paymentStatus, email) => {
     try {
-      const response = await fetch('https://trafywebsite-backend-865611889264.us-central1.run.app/api/sendPaymentEmail', {
+      const response = await fetch('https://trafywebsite-backend-255821839155.us-central1.run.app/api/sendPaymentEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -211,7 +242,7 @@ const sendNotificationEmail = async (paymentStatus, email) => {
 
   // const totalAmount = Number(fee) + (Number(fee) * 0.18);
 const totalAmount = Math.floor(Number(fee) + (Number(fee) * 0.18));
-
+cartDetails.totAmount = totalAmount;
 
   return (
     <div className='enroll'>

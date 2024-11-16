@@ -81,7 +81,7 @@ const CourseHeroData=[
         formLink:"https://courseenquiryform-default-rtdb.firebaseio.com/DM-CourseEnquiryFormData.json",
         demoLink:"https://uiux-advance-formdata-default-rtdb.firebaseio.com/DM-FreeDemoFormData.json",
         fee:"15000",
-
+        totAmount:"",
     },
     {
         id:"responsive-ui-designs",
@@ -119,6 +119,7 @@ const CourseHeroData=[
         fee:"10000",
         formtype:"uiuxCourse",
         courseName:"UIUX-responsive-ui-designs",
+        totAmount:"",
     },
     {
         id:"building-functional-ux",
@@ -156,6 +157,7 @@ const CourseHeroData=[
         fee:"20000",
         formtype:"uiuxCourse",
         courseName:"UIUX-building-functional-ux",
+        totAmount:"",
     },
     {
         id:"spatial-ui-designs",
@@ -193,6 +195,7 @@ const CourseHeroData=[
         fee:"60000",
         formtype:"uiuxCourse",
         courseName:"UIUX-spatial-ui-designs",
+        totAmount:"",
     },
     {
         "id": "5-days-gen-ai-crash-course",
@@ -229,7 +232,8 @@ const CourseHeroData=[
         demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-AdvanceFreeDemoForm.json",
         "fee": "799",
         "formtype": "genAICourse",
-        "courseName": "gen-ai-crash-course"
+        "courseName": "gen-ai-crash-course",
+        totAmount:"",
     },
     {
         "id": "advanced-generative-ai-certification-program",
@@ -266,7 +270,8 @@ const CourseHeroData=[
         "demoLink": "https://freedemo-form-default-rtdb.firebaseio.com/UIUX-AdvanceFreeDemoForm.json",
         "fee": "60000",
         "formtype": "advancedGenAICourse",
-        "courseName": "advanced-gen-ai-certification"
+        "courseName": "advanced-gen-ai-certification",
+        totAmount:"",
     }
     
     
