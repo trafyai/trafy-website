@@ -27,8 +27,8 @@ const LandingPathwayData=[
     {
         id:"spatial-ui-designs",
         img:bs,
-        title:"Sales",
-        label:"Sales",
+        title:"AI",
+        label:"AI",
         url:"/courses",
         color:"#F2FFF0"
     },

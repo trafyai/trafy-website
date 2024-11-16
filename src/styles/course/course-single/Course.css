@@ -423,10 +423,10 @@
     }
     .course-description-container{
         padding: 0;
-        gap: 3rem;
+        gap: 1rem;
     }
     .left-description-container{
-        gap: 3rem;
+        gap: 0rem;
     }
     .about-course{
         width: 100%;
@@ -440,10 +440,11 @@
     }
     .course-description-container{
         width: 85%;
-        gap:3rem;
+        gap:1rem;
     }
     .left-description-container {
         width: 100%;
+        gap: 0rem;
     }
     .about-course {
         gap:1rem;

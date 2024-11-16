@@ -72,10 +72,11 @@
 }
 .course-landing-ai-card-title h3,.course-landing-dm-card-title h3,.course-landing-uiux-card-title h3{
     padding-top: 8px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
     color: var(--h-black);
     font-family: var( --h-font);
+    font-weight: 500;
+
 }
 .course-landing-ai-contents{
     padding: 24px;

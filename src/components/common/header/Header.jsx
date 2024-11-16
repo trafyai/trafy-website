@@ -161,13 +161,13 @@ const handleLogOut = async () => {
             >
               Pathway
             </Link>
-            <Link
+            {/* <Link
               href="/"
               className="menu-pathway"
               onClick={() => handleNavigation("/")}
             >
               Masterclass
-            </Link>
+            </Link> */}
             <Link
               href="http://localhost:3001/"
               className="menu-resources"
@@ -249,13 +249,13 @@ const handleLogOut = async () => {
           {menuOpen && (
             <div className="menu-mobile-contents" ref={menuRef}>
               <div className="menu-top-contents">
-                <Link
+                {/* <Link
                   href="/"
                   className="menu-pathway"
                   onClick={() => handleNavigation("/")}
                 >
                   Masterclass
-                </Link>
+                </Link> */}
                 <Link
                   href="https://blog.trafy.ai/"
                   className="menu-resources"

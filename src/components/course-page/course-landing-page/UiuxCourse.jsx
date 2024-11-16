@@ -22,7 +22,7 @@ export default function UiuxCourse(){
                                 <Link href={`/courses/${item.id}`} className="course-landing-ai-box" key={item.id}>
             
                                     <div className="course-landing-ai-card-title" style={{backgroundColor:item.bgColor}}>
-                                        <h1 style={{fontSize:"14px",fontWeight:"400",fontFamily:"Inter",color:"#1c1623",marginBottom:"4px"}}>{item.level}</h1>
+                                        <h1 style={{fontSize:"14px",fontWeight:"400",fontFamily:"var(--p-font)",color:"#1c1623",marginBottom:"4px"}}>{item.level}</h1>
                                         <h3 style={{fontWeight:"600"}}>{item.title} </h3>
                                     </div>
             
