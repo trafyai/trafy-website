@@ -147,7 +147,7 @@ const handleLogOut = async () => {
       <div className="navbar-container">
         <div className="navbar-log">
           <Link href="/">
-            <Image src={trafyIcon} className="trafy-icon" />
+            {/* <Image src={trafyIcon} className="trafy-icon" /> */}
             <Image src={whiteLogo} alt="trafy logo" className="trafy-logo" />
           </Link>
         </div>
@@ -161,13 +161,6 @@ const handleLogOut = async () => {
             >
               Pathway
             </Link>
-            {/* <Link
-              href="/"
-              className="menu-pathway"
-              onClick={() => handleNavigation("/")}
-            >
-              Masterclass
-            </Link> */}
             <Link
               href="https://blog.trafy.ai/"
               className="menu-resources"
@@ -175,16 +168,24 @@ const handleLogOut = async () => {
             >
               Resources
             </Link>
+            <Link
+              href="/"
+              className="menu-pathway"
+              onClick={() => handleNavigation("/")}
+            >
+              Mentor
+            </Link>
           </div>
           <div className="menu-right-d">
             {!loading && !user ? (
-              <Link
-                href="/signup"
-                className="menu-signup"
-                onClick={() => handleNavigation("/signup")}
-              >
-                Get Started
-              </Link>
+              <div className="menu-buttons">
+              <Link  href="/login" className="menu-login" onClick={() => handleNavigation("/login")} >
+            Login
+            </Link>
+            <Link href="/signup" className="menu-signup" onClick={() => handleNavigation("/signup")} >
+            Free Signup
+            </Link>
+            </div>
             ) : (
               <div className="menu-profile" ref={dropdownRef}>
                 <div onClick={handleDropDown}>
@@ -263,6 +264,13 @@ const handleLogOut = async () => {
                 >
                   Resources
                 </Link>
+                <Link
+                  href="/"
+                  className="menu-pathway"
+                  onClick={() => handleNavigation("/")}
+                >
+                  Mentor
+                </Link>
                 {user && (
                   <hr
                     style={{
@@ -309,13 +317,14 @@ const handleLogOut = async () => {
               )}
               <div className="menu-right">
                 {!loading && !user ? (
-                  <Link
-                    href="/signup"
-                    className="menu-signup"
-                    onClick={() => handleNavigation("/signup")}
-                  >
-                    Get Started
-                  </Link>
+                <div className="menu-buttons">
+                     <Link  href="/login" className="menu-signup" onClick={() => handleNavigation("/login")} >
+                Login
+               </Link>
+              <Link href="/signup" className="menu-signup" onClick={() => handleNavigation("/signup")} >
+               Free Signup
+              </Link>
+              </div>
                 ) : (
                   <div className="menu-profile">
                     <Link href="/account-settings"

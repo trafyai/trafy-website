@@ -51,11 +51,12 @@
   /* } */
   /* [data-theme='dark'] { */
     --trafy-black:#02020a;
-    --trafy-white:#ffffff;
+    --trafy-white:#fffef7;
+    --trafy-pink:#FF79AB;
     --trafy-blue:#2A42F2;
     --h-black:#02020a;
     /* --p-black:#3e3e3e; */   --p-black:#424242;
-    --h-white:#ffffff;
+    --h-white:#fffef7;
     --p-white:#d1d1d1;
     --box-border:#e1e3e1;
 

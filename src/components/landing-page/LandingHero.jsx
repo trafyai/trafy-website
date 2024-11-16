@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import Image from "next/image";
+import LandingImage from '@public/assets/Images/landing-page/hero/Image.svg'
 import Ai from '@public/assets/Images/landing-page/hero/ai 1.svg'
 import Article from '@public/assets/Images/landing-page/hero/article.svg'
 import { UserAuth } from "@context/AuthContext";
@@ -26,26 +27,21 @@ const LandingHero = () => {
                 <div className="landing-hero-container">
                     <div className="landing-hero-contents">
                         <div className="landing-hero-heading">
-                            <h1>Skyrocket your Career </h1>
+                            <h1>Become a Generative AI Expert</h1>
                         </div>
                         <div className="landing-hero-paragraph">
-                            <p>Design, Marketing, Sales, and Startup courses curated for your growth by your Personalized AI Mentor.</p>
+                            <p>Generative AI learning pathway for both coding and non-coding domains</p>
                         </div>
                         <div className="landing-hero-explore-btn" onClick={handleNavigate}>
-                            Get started
+                            Explore Pathway
                         </div>
                     </div>
+
+                    <div className="landing-hero-bottom-container">
+                        <Image src={LandingImage}/>
+                    </div>
               </div>
-              <div className="landing-hero-bottom-container">
-                <div className="landing-hero-bottom-left">
-                    <Image src={Article}/>
-                    <h3>Courses Inspired and Curaterd by Industry Leaders</h3>
-                </div>
-                <div className="landing-hero-bottom-right">
-                    <Image src={Ai} />
-                    <h3>Mentored by AI</h3>
-                </div>
-              </div>
+              
             </div>
         </main>
     );

@@ -1,9 +1,9 @@
 .hero-section{
     padding-top: 120px;
-    padding-bottom: 70px;
+    padding-bottom: 120px;
     display: flex;
     justify-content: center;
-    background-color: var(--trafy-white);
+    background-color: #FF79AB;
 }
 .hero-section-container{
     width: 85%;
@@ -13,7 +13,7 @@
 .hero-main, .hero-sub{
     display: flex;
     flex-direction: column;
-    gap:0.7rem;
+    gap:1rem;
 }
 .hero-main{
     width: 100%;
@@ -26,22 +26,22 @@
 .hero-category p, .hero-popularity p{
     padding: 8px 16px;
     color:var(--h-black);
-    border: 1px solid #818080;
+    border: 1px solid black;
     border-radius: 8px;
     font-family:var( --p-font);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
 }
 .hero-main-heading h1{
     color:var(--h-black);
     font-family: var( --h-font);
     font-weight: 700;
-    font-size: 40px;
+    font-size: 48px;
 }
 .hero-description p{
     font-family: var( --p-font);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     width: 80%;
     line-height: 150%;
     color: var(--p-font);
@@ -320,6 +320,7 @@
 /* -------------------------------------------------course-description------------------------------ */
 
 .course-description{
+    padding-top: 90px;
     display: flex;
     justify-content: center;
     background-color: var(--trafy-white);
