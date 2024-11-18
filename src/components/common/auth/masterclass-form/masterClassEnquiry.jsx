@@ -219,9 +219,9 @@ const MasterClassEnquiryForm = (props) => {
                                     <option value="startup_founder">Startup Founder</option>
                                 </select>
                             </div>
-                            <div className="enquirymessage">
+                            {/* <div className="enquirymessage">
                                 <textarea placeholder="Message" className="enquiry-message" name="message" style={{ width: "100%" }} value={formData.message} onChange={handleChange} />
-                            </div>
+                            </div> */}
                             <button type="submit" className="course-enquiry-button">Submit</button>
 
                         </form>

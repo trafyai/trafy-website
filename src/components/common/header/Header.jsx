@@ -20,6 +20,23 @@ const Header = () => {
   const router = useRouter();
   const { user, logOut, loading } = UserAuth();
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     const handlePopState = () => {
       setMenuOpen(false);
@@ -143,8 +160,12 @@ const handleLogOut = async () => {
 };
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${scrolled ? "scrolled" : "static"}`}>
+   {/* <div className={`navbar`}> */}
+
       <div className="navbar-container">
+      {/* <div className={`navbar-container ${scrolled ? "scrolled" : "static"}`}> */}
+
         <div className="navbar-log">
           <Link href="/">
             {/* <Image src={trafyIcon} className="trafy-icon" /> */}
