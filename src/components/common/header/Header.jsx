@@ -162,7 +162,7 @@ const handleLogOut = async () => {
               Pathway
             </Link>
             <Link
-              href="http://localhost:3001/"
+              href="https://blog.trafy.ai/"
               className="menu-resources"
               onClick={() => handleNavigation("https://blog.trafy.ai/")}
             >
