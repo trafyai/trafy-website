@@ -62,11 +62,11 @@
 .landing-hero-explore-btn:hover {
   background-color: #FF79AB;
   color: var(--trafy-black);
-  top: -4px; /* Using top instead of transform for more reliable movement */
-  box-shadow: -3px 4px black;
+  top: -6px; /* Using top instead of transform for more reliable movement */
+  box-shadow: -3px 6px black;
 }
 .landing-hero-bottom-container{
-  width: 70%;
+  width: 65%;
   display: flex;
   gap: 2rem;
   justify-content: flex-end;
