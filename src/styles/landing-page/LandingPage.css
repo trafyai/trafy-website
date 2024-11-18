@@ -26,7 +26,7 @@
   display: flex;
 }
 .landing-hero-heading h1 {
-  width: 80%;
+  width: 70%;
   font-size: 64px;
   font-family: var(--h-font);
   font-weight: 900;
@@ -34,7 +34,7 @@
   line-height: 120%;
 }
 .landing-hero-paragraph p {
-  width: 90%;
+  width: 70%;
   font-size: 20px;
   font-family: var(--p-font);
   font-weight: 500;
@@ -63,10 +63,10 @@
   background-color: #FF79AB;
   color: var(--trafy-black);
   top: -6px; /* Using top instead of transform for more reliable movement */
-  box-shadow: -3px 6px black;
+  box-shadow: -4px 6px black;
 }
 .landing-hero-bottom-container{
-  width: 65%;
+  width: 60%;
   display: flex;
   gap: 2rem;
   justify-content: flex-end;
@@ -117,6 +117,9 @@
 @media only screen and (max-width: 1201px){
   .landing-hero-heading h1{
     font-size: 56px;
+  }
+  .landing-hero-heading h1 ,.landing-hero-paragraph p {
+    width: 80%;
   }
   .landing-hero-bottom-right,.landing-hero-bottom-left{
     gap:5rem;
@@ -200,6 +203,9 @@
   .landing-hero-paragraph p{
     font-size: 18px;
   }
+  .landing-hero-heading h1 ,.landing-hero-paragraph p {
+    width: 90%;
+  }
   .landing-hero-bottom-left, .landing-hero-bottom-right {
     padding: 40px 32px;
   }
@@ -214,6 +220,9 @@
   }
   .landing-hero-bottom-container{
     gap:1.5rem;
+  }
+  .landing-hero-heading h1 ,.landing-hero-paragraph p {
+    width: 100%;
   }
   .landing-hero-section {
     gap: 2.5rem;

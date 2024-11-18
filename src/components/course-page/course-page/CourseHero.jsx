@@ -281,53 +281,15 @@ export default function CourseHero(props) {
         <main>
             <div className="hero-section">
                 <div className="hero-section-container">
-                    <div className="hero-main">
-                        <div className="hero-label">
-                            <div className="hero-category"><p>{props.category}</p></div>
-                            <div className="hero-popularity"><p>{props.popularity}</p></div>
-                            <div className="share">
-                                <Image src={shareWhite} alt="" onClick={courseShare} className="course-share-icon-white" />
-                            </div>
-                        </div>
-                        <div className="hero-main-heading">
+                    <div className="hero-section-left">
+
                             <h1>{props.courseHeading}</h1>
-                        </div>
-                        <div className="hero-description">
                             <p>{props.courseDescription}</p>
-                        </div>
-                        <div className="hero-price">
-                        <p><strong>INR {props.rate}</strong>  <span style={{textDecoration:"line-through",fontWeight:"400"}}>{props.initialRate}</span></p>
-                        </div>
-                        <div className="hero-cta">
-                            <div className="hero-enroll" onClick={showEnquiry}>Join now</div>
-                            <div className="hero-demo" onClick={showDemo}>Free Demo</div>
-                        </div>
+   
+                            <button className="hero-enroll" onClick={showEnquiry}>Join now</button>
+
                     </div>
-                    {showShare &&
-                        <div className="course-share">
-                            <div className="course-share-exit">
-                                <p>Share</p>
-                                <Image src={props.closeIcon} alt="" onClick={courseShare} />
-                            </div>
-                            <div className="course-share-container">
-                                <div className="course-share-socials">
-                                    <Image src={props.whatsappIcon} alt="whatsapp" onClick={shareToWhatsApp} />
-                                    <Image src={props.facebookIcon} alt="facebook" onClick={shareToFacebook} />
-                                    <Image src={props.linkedinIcon} alt="linkedin" onClick={shareToLinkedIn} />
-                                    <Image src={props.xIcon} alt="x" onClick={shareToTwitter} />
-                                </div>
-                                <div className="course-share-link">
-                                    <input type="text" value={pageUrl} readOnly />
-                                    <button onClick={copyUrlToClipboard}>Copy</button>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                    {showAlert &&
-                        <div className="alert">Link copied to clipboard</div>
-                    }
-                    
-                    {demo && <MasterClassEnquiryForm title="Join Free Demo" courseFee={`${props.fee} `} />}
+
                 </div>
             </div>
         </main>
