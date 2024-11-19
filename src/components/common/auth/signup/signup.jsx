@@ -107,7 +107,7 @@ const Signup = () => {
 
             router.back();
 
-            const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
+            const response = await fetch('https://trafy-newbackend-865611889264.us-central1.run.app/api/createSessionCookie', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -162,7 +162,7 @@ const Signup = () => {
             console.log('Google Sign-In successful and user data stored:', user);
             router.back();
 
-            const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
+            const response = await fetch('https://trafy-newbackend-865611889264.us-central1.run.app/api/createSessionCookie', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

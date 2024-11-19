@@ -80,20 +80,18 @@ const Login = () => {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
 
-            // const idtoken = await user.getIdToken();
-            // console.log("User ID Token:", idtoken);
+            const idtoken = await user.getIdToken();
+            console.log("User ID Token:", idtoken);
 
-            // Store user data in Firebase Realtime Database
-
-            // const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
-            //     method: 'POST',
-            //     credentials: 'include',
-            //     headers: {
-            //         'Content-Type': 'application/json',
+            const response = await fetch('https://trafy-newbackend-865611889264.us-central1.run.app/api/createSessionCookie', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
                     
-            //     },
-            //     body: JSON.stringify({ idToken: idtoken }),
-            // });
+                },
+                body: JSON.stringify({ idToken: idtoken }),
+            });
     
             const data = await response.json();
     
@@ -129,19 +127,19 @@ const Login = () => {
             const user = result.user;
 
 
-            // const idtoken = await user.getIdToken();
-            // console.log("User ID Token:", idtoken);
+            const idtoken = await user.getIdToken();
+            console.log("User ID Token:", idtoken);
 
-            // const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
-            //     method: 'POST',
-            //     credentials: 'include',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //         'Accept': 'application/json',
-            //         'Origin': 'https://trafy.ai'
-            //     },
-            //     body: JSON.stringify({ idToken: idtoken }),
-            // });
+            const response = await fetch('https://trafy-newbackend-865611889264.us-central1.run.app/api/createSessionCookie', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Origin': 'https://trafy.ai'
+                },
+                body: JSON.stringify({ idToken: idtoken }),
+            });
     
             const data = await response.json();
     

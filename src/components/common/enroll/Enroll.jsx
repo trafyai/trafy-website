@@ -98,7 +98,7 @@ const Enroll = () => {
       cartDetails.totAmount = totalAmount;
 
 
-    console.log("Amount in paise to send:", totalAmount); // Should be in paise
+    // console.log("Amount in paise to send:", totalAmount); // Should be in paise
 
 
     const { courseHeading = "", courseDescription = "", type = "other" } = cartDetails || {};  // Ensure a default 'type'
