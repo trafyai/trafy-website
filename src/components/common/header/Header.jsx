@@ -20,6 +20,23 @@ const Header = () => {
   const router = useRouter();
   const { user, logOut, loading } = UserAuth();
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     const handlePopState = () => {
       setMenuOpen(false);
@@ -143,11 +160,15 @@ const handleLogOut = async () => {
 };
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${scrolled ? "scrolled" : "static"}`}>
+   {/* <div className={`navbar`}> */}
+
       <div className="navbar-container">
+      {/* <div className={`navbar-container ${scrolled ? "scrolled" : "static"}`}> */}
+
         <div className="navbar-log">
           <Link href="/">
-            <Image src={trafyIcon} className="trafy-icon" />
+            {/* <Image src={trafyIcon} className="trafy-icon" /> */}
             <Image src={whiteLogo} alt="trafy logo" className="trafy-logo" />
           </Link>
         </div>
@@ -161,13 +182,6 @@ const handleLogOut = async () => {
             >
               Pathway
             </Link>
-            {/* <Link
-              href="/"
-              className="menu-pathway"
-              onClick={() => handleNavigation("/")}
-            >
-              Masterclass
-            </Link> */}
             <Link
               href="https://blog.trafy.ai/"
               className="menu-resources"
@@ -175,16 +189,24 @@ const handleLogOut = async () => {
             >
               Resources
             </Link>
+            <Link
+              href="/"
+              className="menu-pathway"
+              onClick={() => handleNavigation("/")}
+            >
+              Mentor
+            </Link>
           </div>
           <div className="menu-right-d">
             {!loading && !user ? (
-              <Link
-                href="/signup"
-                className="menu-signup"
-                onClick={() => handleNavigation("/signup")}
-              >
-                Get Started
-              </Link>
+              <div className="menu-buttons">
+              <Link  href="/login" className="menu-login" onClick={() => handleNavigation("/login")} >
+            Login
+            </Link>
+            <Link href="/signup" className="menu-signup" onClick={() => handleNavigation("/signup")} >
+            Free Signup
+            </Link>
+            </div>
             ) : (
               <div className="menu-profile" ref={dropdownRef}>
                 <div onClick={handleDropDown}>
@@ -263,6 +285,13 @@ const handleLogOut = async () => {
                 >
                   Resources
                 </Link>
+                <Link
+                  href="/"
+                  className="menu-pathway"
+                  onClick={() => handleNavigation("/")}
+                >
+                  Mentor
+                </Link>
                 {user && (
                   <hr
                     style={{
@@ -309,13 +338,14 @@ const handleLogOut = async () => {
               )}
               <div className="menu-right">
                 {!loading && !user ? (
-                  <Link
-                    href="/signup"
-                    className="menu-signup"
-                    onClick={() => handleNavigation("/signup")}
-                  >
-                    Get Started
-                  </Link>
+                <div className="menu-buttons">
+                     <Link  href="/login" className="menu-signup" onClick={() => handleNavigation("/login")} >
+                Login
+               </Link>
+              <Link href="/signup" className="menu-signup" onClick={() => handleNavigation("/signup")} >
+               Free Signup
+              </Link>
+              </div>
                 ) : (
                   <div className="menu-profile">
                     <Link href="/account-settings"

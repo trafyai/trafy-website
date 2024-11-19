@@ -89,7 +89,7 @@ function Footer() {
 
         <div className="copyrights">
           <div className="footer-logo"><Image src={WhiteLogo} alt="trafy logo" width={77.612} height={32} /></div>
-          <div className="copyright-text">© 2024 trafy.
+          <div className="copyright-text">© 2024 trafy, Dmerz Technology Private Limited
              {/* | <span>Commitments</span> */}
              </div>
         </div>

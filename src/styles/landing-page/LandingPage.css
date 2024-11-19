@@ -1,24 +1,24 @@
 .landing-hero-section {
-  padding-top: 160px;
+  padding-top: 140px;
   padding-bottom: 80px;
   display: flex;
-  flex-direction: column;
-  gap:4rem;
+  gap:2rem;
   align-items: center;
   justify-content: center;
-  background-color: var(--trafy-white);
+  background-color: var(--trafy-pink);
 }
 .landing-hero-container{
   width: 85%;
   display: flex;
+  justify-content: space-between;
   gap: 2rem;
 }
 .landing-hero-contents {
-  width:60%;
+  width:100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
+  gap: 1.5rem;
+  justify-content: flex-start;
 }
 
 .landing-hero-heading,
@@ -26,39 +26,54 @@
   display: flex;
 }
 .landing-hero-heading h1 {
-  font-size: 56px;
+  width: 70%;
+  font-size: 64px;
   font-family: var(--h-font);
-  font-weight: 600;
+  font-weight: 900;
   color: var(--h-black);
-  line-height: 150%;
+  line-height: 120%;
 }
 .landing-hero-paragraph p {
-  width: 90%;
+  width: 70%;
   font-size: 20px;
   font-family: var(--p-font);
-  font-weight: 400;
-  line-height: 170%;
-  color: var(--p-black);
-}
-.landing-hero-explore-btn {
-  margin-top: 6px;
-  padding: 12px 32px;
-  background-color: var(--trafy-black);
-  border: 2px solid var(--trafy-black);
-  border-radius: 8px;
-  color: var(--h-white);
-  font-family: var(--h-font);
   font-weight: 500;
-  font-size: 18px;
-}
-.landing-hero-explore-btn:hover {
-  background-color: inherit;
+  line-height: 170%;
   color: var(--h-black);
 }
+.landing-hero-explore-btn {
+  width: max-content;
+  height: max-content;
+  margin-top: 6px;
+  padding: 16px 32px;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: var(--p-font);
+  font-weight: 500;
+  background-color: var(--trafy-black);
+  color: var(--trafy-white);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  top: 0; /* Explicit starting position */
+  transform: translateY(0); /* Explicit starting transform */
+  box-shadow: 0px 0px transparent;
+}
+.landing-hero-explore-btn:hover {
+  background-color: #FF79AB;
+  color: var(--trafy-black);
+  top: -6px; /* Using top instead of transform for more reliable movement */
+  box-shadow: -4px 6px black;
+}
 .landing-hero-bottom-container{
-  width: 85%;
+  width: 60%;
   display: flex;
   gap: 2rem;
+  justify-content: flex-end;
+}
+.landing-hero-bottom-container img{
+  width: 100%;
+  height: auto;
 }
 .landing-hero-bottom-left{
   width:70%;
@@ -100,6 +115,12 @@
 }
 
 @media only screen and (max-width: 1201px){
+  .landing-hero-heading h1{
+    font-size: 56px;
+  }
+  .landing-hero-heading h1 ,.landing-hero-paragraph p {
+    width: 80%;
+  }
   .landing-hero-bottom-right,.landing-hero-bottom-left{
     gap:5rem;
   }
@@ -117,8 +138,18 @@
     padding-top: 140px;
     padding-bottom: 60px;
   }
+  .landing-hero-container{
+    flex-direction: column;
+  }
   .landing-hero-contents{
     width:80%;
+  }
+  .landing-hero-bottom-container{
+    justify-content: flex-start;
+  }
+  .landing-hero-bottom-container img{
+    height: 60%;
+    width: auto;
   }
   .landing-hero-heading h1{
     font-size: 48px;
@@ -139,7 +170,14 @@
   }
 }
 @media only screen and (max-width: 800px) {
+  .landing-hero-contents{
+    width: 100%;
+  }
+  .landing-hero-heading h1{
+    width: 90%;
+  }
   .landing-hero-bottom-container{
+    width: 90%;
     flex-direction: column;
   }
   .landing-hero-bottom-left, .landing-hero-bottom-right {
@@ -150,7 +188,13 @@
   .landing-hero-section{
     padding-top: 110px;
   }
+  .landing-hero-container{
+    gap: 2.5rem;
+  }
   .landing-hero-contents{
+    gap: 1rem;
+  }
+  .landing-hero-contents,  .landing-hero-bottom-container{
     width: 100%;
   }
   .landing-hero-heading h1{
@@ -158,6 +202,9 @@
   }
   .landing-hero-paragraph p{
     font-size: 18px;
+  }
+  .landing-hero-heading h1 ,.landing-hero-paragraph p {
+    width: 90%;
   }
   .landing-hero-bottom-left, .landing-hero-bottom-right {
     padding: 40px 32px;
@@ -173,6 +220,9 @@
   }
   .landing-hero-bottom-container{
     gap:1.5rem;
+  }
+  .landing-hero-heading h1 ,.landing-hero-paragraph p {
+    width: 100%;
   }
   .landing-hero-section {
     gap: 2.5rem;

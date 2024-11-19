@@ -16,10 +16,12 @@ export default function CourseCertificate(props){
                             <p>{props.description}</p>
                         </div>
                     </div>}
+                    {!props.image &&
                     <div className="course-certificate-description">
                         <div className="course-certificate-heading"><h2>{props.heading}</h2></div>
                             <p>{props.description}</p>
                         </div>
+}
                 </div>
             </div>
         </main>
