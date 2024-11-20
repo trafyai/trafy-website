@@ -140,7 +140,7 @@ const handleLogOut = async () => {
       await logOut();  // Sign out the user
 
       // Notify the backend to clear the session cookie
-      const response = await fetch('http://localhost:5000/api/clearSessionCookie', {
+      const response = await fetch('https://trafy-newbackend-865611889264.us-central1.run.app/api/clearSessionCookie', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -183,9 +183,9 @@ const handleLogOut = async () => {
               Pathway
             </Link>
             <Link
-              href="https://blog.trafy.ai/"
+              href="https://blog.trafy.ai"
               className="menu-resources"
-              onClick={() => handleNavigation("https://blog.trafy.ai/")}
+              onClick={() => handleNavigation("https://blog.trafy.ai")}
             >
               Resources
             </Link>
@@ -279,7 +279,7 @@ const handleLogOut = async () => {
                   Masterclass
                 </Link> */}
                 <Link
-                  href="https://blog.trafy.ai/"
+                  href="https://blog.trafy.ai"
                   className="menu-resources"
                   onClick={() => handleNavigation("https://blog.trafyai.com")}
                 >
