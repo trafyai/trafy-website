@@ -49,6 +49,8 @@ export const AuthContextProvider = ({ children }) => {
 
         return () => unsubscribe();
     }, []);
+
+    
     const googleSignIn = async () => {
         const provider = new GoogleAuthProvider();
         const userCredential = await signInWithPopup(auth, provider);
