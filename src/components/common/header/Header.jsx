@@ -140,7 +140,7 @@ const handleLogOut = async () => {
       await logOut();  // Sign out the user
 
       // Notify the backend to clear the session cookie
-      const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/clearSessionCookie', {
+      const response = await fetch('https://trafy-newbackend-865611889264.us-central1.run.app/api/clearSessionCookie', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
