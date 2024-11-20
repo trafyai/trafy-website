@@ -81,7 +81,7 @@ const Login = () => {
             const user = userCredential.user;
 
             const idtoken = await user.getIdToken();
-            // console.log("User ID Token:", idtoken);
+            console.log("User ID Token:", idtoken);
 
             const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
                 method: 'POST',
@@ -128,7 +128,7 @@ const Login = () => {
 
 
             const idtoken = await user.getIdToken();
-            // console.log("User ID Token:", idtoken);
+            console.log("User ID Token:", idtoken);
 
             const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
                 method: 'POST',
@@ -145,7 +145,7 @@ const Login = () => {
     
             if (data.success) {
                 // Store the session cookie in the browser
-                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.yourdomain.com`;
+                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.blog.trafy.ai`;
     
                 // You can now redirect or perform other actions
                 router.push('/');
