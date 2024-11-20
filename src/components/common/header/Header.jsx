@@ -183,9 +183,9 @@ const handleLogOut = async () => {
               Pathway
             </Link>
             <Link
-              href="https://blog.trafy.ai/"
+              href="https://blog.trafy.ai"
               className="menu-resources"
-              onClick={() => handleNavigation("https://blog.trafy.ai/")}
+              onClick={() => handleNavigation("https://blog.trafy.ai")}
             >
               Resources
             </Link>
@@ -279,7 +279,7 @@ const handleLogOut = async () => {
                   Masterclass
                 </Link> */}
                 <Link
-                  href="https://blog.trafy.ai/"
+                  href="https://blog.trafy.ai"
                   className="menu-resources"
                   onClick={() => handleNavigation("https://blog.trafyai.com")}
                 >

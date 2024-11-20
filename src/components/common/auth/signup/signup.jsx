@@ -96,7 +96,7 @@ const Signup = () => {
 
             
             const idtoken = await user.getIdToken();
-            // console.log("User ID Token:", idtoken);
+            console.log("User ID Token:", idtoken);
 
             const userRef = ref(database, 'usersData/' + user.uid);
             await set(userRef, {

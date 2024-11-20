@@ -88,16 +88,16 @@ const Login = () => {
                 credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
-                    
+                    'Accept': 'application/json',
+                    'Origin': 'https://trafy.ai'
                 },
                 body: JSON.stringify({ idToken: idtoken }),
             });
-    
             const data = await response.json();
     
             if (data.success) {
                 // Store the session cookie in the browser
-                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.yourdomain.com`;
+                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.trafy.ai`;
     
                 // You can now redirect or perform other actions
                 router.push('/');
@@ -145,7 +145,7 @@ const Login = () => {
     
             if (data.success) {
                 // Store the session cookie in the browser
-                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.blog.trafy.ai`;
+                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.trafy.ai`;
     
                 // You can now redirect or perform other actions
                 router.push('/');
