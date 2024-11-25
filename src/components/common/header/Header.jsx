@@ -140,17 +140,17 @@ const handleLogOut = async () => {
       await logOut();  // Sign out the user
 
       // Notify the backend to clear the session cookie
-      const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/clearSessionCookie', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ clearSession: true }),  // Indicate the session should be cleared
-      });
+      // const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/clearSessionCookie', {
+      //     method: 'POST',
+      //     headers: {
+      //         'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify({ clearSession: true }),  // Indicate the session should be cleared
+      // });
 
-      if (!response.ok) {
-          throw new Error('Failed to clear session cookie');
-      }
+      // if (!response.ok) {
+      //     throw new Error('Failed to clear session cookie');
+      // }
 
       // Redirect to home page
       router.push("/");

@@ -81,7 +81,7 @@ const Login = () => {
             const user = userCredential.user;
 
             const idtoken = await user.getIdToken();
-            console.log("User ID Token:", idtoken);
+            // console.log("User ID Token:", idtoken);
 
             const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
                 method: 'POST',
@@ -127,31 +127,31 @@ const Login = () => {
             const user = result.user;
 
 
-            const idtoken = await user.getIdToken();
-            console.log("User ID Token:", idtoken);
+            // const idtoken = await user.getIdToken();
+            // console.log("User ID Token:", idtoken);
 
-            const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
-                method: 'POST',
-                credentials: 'include',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                    'Origin': 'https://trafy.ai'
-                },
-                body: JSON.stringify({ idToken: idtoken }),
-            });
+            // const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
+            //     method: 'POST',
+            //     credentials: 'include',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //         'Accept': 'application/json',
+            //         'Origin': 'https://trafy.ai'
+            //     },
+            //     body: JSON.stringify({ idToken: idtoken }),
+            // });
     
-            const data = await response.json();
+            // const data = await response.json();
     
-            if (data.success) {
-                // Store the session cookie in the browser
-                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.trafy.ai`;
+            // if (data.success) {
+            //     // Store the session cookie in the browser
+            //     document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.trafy.ai`;
     
-                // You can now redirect or perform other actions
-                router.push('/');
-            } else {
-                setGeneralError('Failed to create a session. Please try again.');
-            }
+            //     // You can now redirect or perform other actions
+            //     router.push('/');
+            // } else {
+            //     setGeneralError('Failed to create a session. Please try again.');
+            // }
 
             // router.back();
 

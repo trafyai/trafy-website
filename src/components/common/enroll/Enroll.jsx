@@ -134,13 +134,13 @@ const Enroll = () => {
         
       });
 
-      console.log("cartDetails:", cartDetails);
+//       console.log("cartDetails:", cartDetails);
 
-      console.log({
-        amount: totalAmount,
-        name: courseHeading,
-        description: courseDescription,
-});
+//       console.log({
+//         amount: totalAmount,
+//         name: courseHeading,
+//         description: courseDescription,
+// });
 
 
       const data = await res.json();

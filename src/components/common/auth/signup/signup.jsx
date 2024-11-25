@@ -96,7 +96,7 @@ const Signup = () => {
 
             
             const idtoken = await user.getIdToken();
-            console.log("User ID Token:", idtoken);
+            // console.log("User ID Token:", idtoken);
 
             const userRef = ref(database, 'usersData/' + user.uid);
             await set(userRef, {
@@ -146,7 +146,7 @@ const Signup = () => {
             const user = result.user;
 
             
-            const idtoken = await user.getIdToken();
+            // const idtoken = await user.getIdToken();
             // console.log("User ID Token:", idtoken);
     
             // Check if the user data already exists in the Firebase Realtime Databas
@@ -162,25 +162,25 @@ const Signup = () => {
             console.log('Google Sign-In successful and user data stored:', user);
             router.back();
 
-            const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ idToken: idtoken }),
-            });
+            // const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/createSessionCookie', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({ idToken: idtoken }),
+            // });
     
-            const data = await response.json();
+            // const data = await response.json();
     
-            if (data.success) {
-                // Store the session cookie in the browser
-                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.trafy.ai`;
+            // if (data.success) {
+            //     // Store the session cookie in the browser
+            //     document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.trafy.ai`;
     
-                // You can now redirect or perform other actions
-                router.push('/');
-            } else {
-                setGeneralError('Failed to create a session. Please try again.');
-            }
+            //     // You can now redirect or perform other actions
+            //     router.push('/');
+            // } else {
+            //     setGeneralError('Failed to create a session. Please try again.');
+            // }
 
             
         } catch (error) {
