@@ -27,7 +27,7 @@ const ForgotPassword = () => {
         setError('');
 
         const actionCodeSettings = {
-            url: 'http://localhost:3000/reset-password',
+            url: 'https://trafy.ai/reset-password',
             handleCodeInApp: true,
         };
 
