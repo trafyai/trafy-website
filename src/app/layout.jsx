@@ -1,7 +1,6 @@
 import "@styles/globals.css";
 import Header from "@components/common/header/Header.jsx";
 import Footer from "@components/common/footer/Footer";
-import imageO from "../app/opengraph-image.png";
 import { AuthContextProvider } from "@context/AuthContext";
 import { CourseContextProvider } from "@context/CourseContext";
 import { CartProvider } from "@context/CartContext";
@@ -13,17 +12,31 @@ export const metadata = {
   title: "trafy - Your Personalised AI mentor",
   description:
     "Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance",
-  metadataBase: new URL("https://trafyai.com/"),
+  metadataBase: new URL("https://trafy.ai/"),
   openGraph: {
+    type: "website",
+    url: "https://trafy.ai",
     title: "trafy - Your Personalised AI mentor",
     description:
       "Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance",
+      images: [
+        {
+          url: "https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/opengraph-image%20(1).png?alt=media&token=0683e583-ffc7-417f-9701-a04ed58305e7",
+          width: 1200,
+          height: 630,
+          alt: "trafy",
+        },
+      ],
+
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
+    title: "trafy - Your Personalised AI mentor",
+    description:"Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance",
+    url: `https://trafy.ai`,
+    image: "https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/opengraph-image%20(1).png?alt=media&token=0683e583-ffc7-417f-9701-a04ed58305e7",
   },
-  image: imageO,
-};
+}
 
 
 export default function RootLayout({ children }) {
