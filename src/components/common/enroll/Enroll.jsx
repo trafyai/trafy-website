@@ -157,7 +157,8 @@ const Enroll = () => {
             // Step 2: On successful payment
             const paymentStatus = "success";
             await storeFormDataInFirebase(paymentStatus);
-            await sendNotificationEmail(paymentStatus, email); // Send notification email
+            await sendNotificationEmail(paymentStatus, email);
+            // await handleSuccessPayment(response, email); // Send notification email
             alert("Payment Successful");
             window.location.reload();
           },
@@ -215,7 +216,7 @@ const storeFormDataInFirebase = async (paymentStatus) => {
 // New function to send notification email after payment
 const sendNotificationEmail = async (paymentStatus, email) => {
     try {
-      const response = await fetch('https://trafy-newbackend-255821839155.us-central1.run.app/api/sendPaymentEmail', {
+      const response = await fetch('http://localhost:5000/api/sendPaymentEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -231,6 +232,26 @@ const sendNotificationEmail = async (paymentStatus, email) => {
       console.error("Error sending notification email:", error);
     }
 };
+
+// const handlePaymentSuccess = async (paymentId, email, amount) => {
+//   try {
+//       const response = await fetch('http://localhost:5000/api/paymentSuccess', {
+//           method: 'POST',
+//           headers: { 'Content-Type': 'application/json' },
+//           body: JSON.stringify({ paymentId, email, amount }),
+//       });
+
+//       const data = await response.json();
+//       if (data.success) {
+//           alert(`Invoice created! View it here: ${data.invoiceUrl}`);
+//       } else {
+//           alert('Failed to create invoice');
+//       }
+//   } catch (error) {
+//       console.error('Error handling payment success:', error);
+//   }
+// };
+
 
   
 
