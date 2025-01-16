@@ -5,7 +5,9 @@ import { auth } from '@firebase';
 import { useRouter } from 'next/navigation';
 import { UserAuth } from '@context/AuthContext';  // Import the AuthContext
 import '@styles/common/auth/ResetPassword.css';
-
+export const metadata = {
+    robots: "noindex, nofollow",
+  };
 const ResetPassword = () => {
     const { user } = UserAuth();  // Access the user from AuthContext
     const [newPassword, setNewPassword] = useState('');

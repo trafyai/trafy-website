@@ -6,6 +6,9 @@ import UserAccountSetting from '@components/common/auth/user/UserAccountSetting'
 import UserProgress from '@components/common/auth/user/UserProgress'
 import { useRouter } from "next/navigation";
 import { UserAuth } from "@context/AuthContext";
+export const metadata = {
+  robots: "noindex, nofollow",
+};
 const Page = () => {
 
   const router = useRouter();

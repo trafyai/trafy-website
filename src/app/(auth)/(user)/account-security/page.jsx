@@ -5,7 +5,9 @@ import UserDashboard from '@components/common/auth/user/UserDashboard';
 import UserAccountSecurity from '@components/common/auth/user/UserAccountSecurity';
 import { useRouter } from "next/navigation";
 import { UserAuth } from "@context/AuthContext";
-
+export const metadata = {
+  robots: "noindex, nofollow",
+};
 const Page = () => {
   const router = useRouter();
   const { user, loading } = UserAuth();
