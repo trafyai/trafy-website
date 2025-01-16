@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useState, useEffect } from 'react';
 import { sendPasswordResetEmail } from 'firebase/auth';
@@ -5,9 +6,7 @@ import { auth } from '@firebase';
 import { useRouter } from 'next/navigation';
 import { UserAuth } from '@context/AuthContext';  // Import the AuthContext
 import '@styles/common/auth/ForgotPassword.css';
-export const metadata = {
-    robots: "noindex, nofollow",
-  };
+
 const ForgotPassword = () => {
     const { user } = UserAuth();  // Access the user from AuthContext
     const [email, setEmail] = useState('');
