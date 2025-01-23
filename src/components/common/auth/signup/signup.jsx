@@ -119,7 +119,7 @@ const Signup = () => {
     
             if (data.success) {
                 // Store the session cookie in the browser
-                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.trafy.ai`;
+                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.academy.trafy.ai`;
     
                 // You can now redirect or perform other actions
                 router.push('/');

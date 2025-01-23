@@ -1,5 +1,5 @@
 // components/common/auth/cookies/CookiePopup.jsx
-
+'use client'
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import styles from '@styles/common/cookies/CookiePopup.css'; // Import the CSS Module

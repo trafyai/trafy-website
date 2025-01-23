@@ -22,19 +22,48 @@ import CoursePayment from "@components/course-page/course-page/CoursePayment";
 import CourseFaq from "@components/course-page/course-page/CourseFaq";
 import CourseSimilar from "@components/course-page/course-page/CourseSimilar";
 
-// export async function generateMetadata({ params, searchParams }, parent) {
-//   const { slug } = params;
-//   const HeroData = CourseHeroData.find((course) => course.id === slug);
+export async function generateMetadata({ params, searchParams }, parent) {
+  const { slug } = params;
+  const data = CourseHeroData.find((course) => course.id === slug);
 
-//   return {
-//     title: HeroData.courseHeading,
-//     description: HeroData.courseDescription,
-//     openGraph: {
-//       title: HeroData.courseHeading,
-//       description: HeroData.courseDescription,
-//     },
-//   };
-// }
+  return {
+    title: data.courseHeading,
+    description: data.courseDescription,
+    alternates: {
+      canonical: `https://academy.trafy.ai/courses/${data.id}`,
+    },
+    openGraph: {
+      url: `https://academy.trafy.ai/courses/${data.id}`,
+      type: "website",
+      title: data.courseHeading,
+      description:data.courseDescription,
+    //   images: [
+    //     {
+    //       url: "https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/opengraph-image%20(1).png?alt=media&token=0683e583-ffc7-417f-9701-a04ed58305e7",
+    //       width: 1200,
+    //       height: 630,
+    //       alt: "trafy"
+    //     }
+    //   ]
+    // },
+    // twitter: {
+    //   card: "summary_large_image",
+    //   title: "trafy - Your Personalised AI mentor",
+    //   description:
+    //   "Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance",
+    //   // creator: "@dminhvu02",
+    //   // site: "@dminhvu02",
+    //   images: [
+    //     {
+    //       url: "https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/opengraph-image%20(1).png?alt=media&token=0683e583-ffc7-417f-9701-a04ed58305e7",
+    //       width: 1200,
+    //       height: 630,
+    //       alt: "trafy"
+    //     }
+    //   ]
+    },
+}
+}
 
 export default function CoursePage({ params }) {
   const { slug } = params;
@@ -52,8 +81,18 @@ export default function CoursePage({ params }) {
   const FaqData = CourseFaqData.find((course) => course.id === slug);
   const SimilarData = CourseSimilarData.find((course) => course.id === slug);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',  //e.g., Person, Article, Organization
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://academy.trafy.ai/courses/${HeroData.id}`,
+    },    name: HeroData.courseHeading,
+    description: HeroData.courseDescription,
+  }
+
   return (
-    <main>
+    <div>
       <CourseHero {...HeroData} />
       <CourseAbout {...AboutData} />
       <CourseSyllabus {...SyllabusData} />
@@ -63,6 +102,10 @@ export default function CoursePage({ params }) {
       <CoursePayment {...PaymentData} />
       <CourseFaq {...FaqData} />
       {/* <CourseSimilar {...SimilarData} /> */}
-    </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </div>
   );
 }

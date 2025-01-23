@@ -89,7 +89,7 @@ const Login = () => {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
-                    'Origin': 'https://trafy.ai'
+                    'Origin': 'https://academy.trafy.ai'
                 },
                 body: JSON.stringify({ idToken: idtoken }),
             });
@@ -97,7 +97,7 @@ const Login = () => {
     
             if (data.success) {
                 // Store the session cookie in the browser
-                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.trafy.ai`;
+                document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.academy.trafy.ai`;
     
                 // You can now redirect or perform other actions
                 router.push('/');
@@ -136,7 +136,7 @@ const Login = () => {
             //     headers: {
             //         'Content-Type': 'application/json',
             //         'Accept': 'application/json',
-            //         'Origin': 'https://trafy.ai'
+            //         'Origin': 'https://academy.trafy.ai'
             //     },
             //     body: JSON.stringify({ idToken: idtoken }),
             // });
@@ -145,7 +145,7 @@ const Login = () => {
     
             // if (data.success) {
             //     // Store the session cookie in the browser
-            //     document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.trafy.ai`;
+            //     document.cookie = `authToken=${data.sessionCookie}; path=/; domain=.academy.trafy.ai`;
     
             //     // You can now redirect or perform other actions
             //     router.push('/');
