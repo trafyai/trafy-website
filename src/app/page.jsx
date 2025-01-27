@@ -1,6 +1,10 @@
 import React from 'react'
-import LandingPage from '@components/landing-page/LandingPage';
+import LandingHero from '@components/landing-page/LandingHero';
+import LandingCourses from '@components/landing-page/LandingCourses';
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { LandingPotential } from '@components/landing-page/LandingPotential';
+import { Landingcertificate } from '@components/landing-page/LandingCertificate';
+import LandingReview from '@components/landing-page/LandingReview';
 
 export const metadata= {
   title: "trafy - Your Personalised AI mentor",
@@ -56,8 +60,11 @@ const Home = () => {
        
     <div>
         <GoogleAnalytics gaId="G-THWZDJH6WZ" />
-landing
-        {/* <LandingPage/> */}
+        <LandingHero/>
+        <LandingCourses/>
+        <LandingPotential/>
+        <Landingcertificate/>
+        <LandingReview/>
     </div>
    
   )

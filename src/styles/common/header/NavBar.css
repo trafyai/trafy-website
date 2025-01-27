@@ -81,7 +81,7 @@
       position: absolute;
       top: 60px;
       right: 0;
-      background-color: var(--trafy-black);
+      background-color: var(--trafy-white);
       z-index: 1000;
 
           /* backdrop-filter: blur(10px);
