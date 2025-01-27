@@ -1,6 +1,6 @@
 .landing-hero{
     padding-top: 140px;
-    padding-bottom: 120px;
+    padding-bottom: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +63,11 @@
         gap: 1.5rem;
     }
     .landing-hero-container h1{
+      width: 80%;
        font-size: 56px;
+    }
+    .landing-hero-container p{
+      width: 90%;
     }
     .landing-hero-container p,.landing-hero-button{
         font-size: 20px;
@@ -79,6 +83,10 @@
      }
 }
 @media only screen and (max-width:600px){
+  .landing-hero{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
     .landing-hero-container h1{
         width: 90%;
         font-size: 48px;
@@ -89,7 +97,8 @@
 }
 @media only screen and (max-width:400px){
     .landing-hero{
-        padding-top: 100px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     .landing-hero-container{
         width:90%
@@ -123,6 +132,7 @@
     font-weight: 500;
     font-family: var( --h-font);
     text-align: center;
+    line-height: 150%;
 }
 .landing-company-logo{
     width: 80%;
@@ -135,9 +145,40 @@
     height: 28px;
     width: auto;
 }
+@media only screen and (max-width:1024px){
+  .landing-company{
+    padding: 60px 0px;
+  }
+  .landing-company-container{
+    width: 85%;
+  }
+  .landing-company-logo{
+    width: 100%;
+  }
+}
+@media only screen and (max-width:600px){
+  .landing-company-container{
+    width: 90%;
+  }
+  .landing-company-container h2{
+    font-size: 20px;
+  }
+  .landing-company-logo{
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width:400px){
+  .landing-company-logo{
+    gap: 1.5rem;
+  }
+  .landing-company-logo img {
+    height: 24px;
+    width: auto;
+}
+}
 /* -------------------------------------------------------------------Landing courses---------------------------------------------------- */
 .landing-courses{
-    padding: 90px 0px;
+    padding: 70px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,13 +263,19 @@
     }
   }
   @media only screen and (max-width:600px){
+    .landing-courses{
+      padding: 60px 0px;
+    }
     .landing-courses-container{
       width: 90%;
+    }
+    .landing-courses-container h2{
+      font-size: 28px;
     }
   }
   @media only screen and (max-width:400px){
     .landing-courses{
-      padding: 70px 0px;
+      padding: 40px 0px;
     }
     .landing-courses-contents{
       gap: 1.5rem;
@@ -241,7 +288,7 @@
 
   /* -----------------------------------------------Landing-potental------------------------------------------- */
   .landing-potential{
-    padding: 90px 0px;
+    padding: 70px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,7 +319,7 @@
     gap: 1rem;
     flex-wrap: wrap;
   }
-  .landing-potential-contents p{
+  .landing-potential-contents span{
     width: max-content;
     font-size: 18px;
     color:var(--p-black);
@@ -283,10 +330,57 @@
     border: 1px solid var(--trafy-black);
     border-radius: 8px;
   }
-
+  @media only screen and (max-width:1024px){
+    .landing-potential-container{
+      width: 85%;
+    }
+    .landing-potential-container h2{
+      width: 65%;
+    }
+  }
+  @media only screen and (max-width:850px){
+    .landing-potential-container h2{
+      width: 80%;
+    }
+    .landing-potential-container p{
+      width: 70%;
+    }
+  }
+  @media only screen and (max-width:600px){
+    .landing-potential {
+      padding: 60px 0px;
+    }
+    .landing-potential-container{
+      width: 90%;
+      gap: 1.2rem;
+    }
+    .landing-potential-container h2{
+      font-size: 28px;
+      width: 90%;
+    }
+    .landing-potential-container p{
+      width: 90%;
+    }
+  }
+  @media only screen and (max-width:400px){
+    .landing-potential {
+      padding: 40px 0px;
+    }
+    .landing-potential-container{
+      width: 90%;
+      gap: 1.2rem;
+    }
+    .landing-potential-container h2{
+      font-size: 28px;
+      width: 100%;
+    }
+    .landing-potential-container p{
+      width: 100%;
+    }
+  }
   /* --------------------------------------Landing Certificate-------------------------------- */
   .landing-certificate{
-    padding: 90px 0px;
+    padding: 70px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,6 +417,7 @@
     padding-top: 6PX;
     display: flex;
     gap: 1.5rem;
+  
   }
   .landing-certificate-stamps img{
     height: 50px;
@@ -337,11 +432,69 @@
     width: auto;
     height: auto;
   }
-
+  @media only screen and (max-width:1200px){
+    .landing-certificate-image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .landing-certificate-image img{
+      width: 100%;
+      height: auto;
+    }
+    .landing-certificate-headline h2{
+      width: 90%;
+    }
+  }
+  @media only screen and (max-width:1024px){
+    .landing-certificate-container{
+      width: 85%;
+    }
+    .landing-certificate-headline h2 {
+      width: 100%;
+  }
+  }
+  @media only screen and (max-width:850px){
+    .landing-certificate-container{
+      flex-direction: column;
+    }
+    .landing-certificate-headline{
+      width: 100%;
+    }
+    .landing-certificate-image {
+      width: 60%;
+    }
+  }
+  @media only screen and (max-width:600px){
+    .landing-certificate {
+      padding: 60px 0px;
+    }
+    .landing-certificate-container{
+      gap: 3rem;
+    }
+    .landing-certificate-headline h2{
+      font-size: 28px;
+    }
+    .landing-certificate-image {
+      width: 100%;
+  }
+  }
+  @media only screen and (max-width:400px){
+    .landing-certificate {
+      padding: 40px 0px;
+    }
+    .landing-certificate-container {
+      gap: 2rem;
+  }
+    .landing-certificate-stamps img {
+      height: 40px;
+      width: auto;
+  }
+  }
   /* -------------------------------------------------------------Landing Skill------------------------------------------------ */
 
   .landing-skill{
-    padding: 90px 0px;
+    padding: 70px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -390,9 +543,41 @@
     background-color: var(--trafy-white);
     color: var(--h-black);
   }
+  @media only screen and (max-width:1024px){
+    .landing-skill-container{
+      width: 85%;
+    }
+    .landing-skill-headline{
+      width: 80%;
+    }
+  }
+  @media only screen and (max-width:850px){
+    .landing-skill-headline{
+      width: 90%;
+    }
+  }
+  @media only screen and (max-width:600px){
+    .landing-skill {
+      padding: 60px 0px;
+    }
+    .landing-skill-container {
+      width: 90%;
+  }
+  .landing-skill-headline{
+    width: 100%;
+  }
+    .landing-skill-headline h2{
+      font-size: 28px;
+    }
+  }
+  @media only screen and (max-width:400px){
+    .landing-skill {
+      padding: 40px 0px;
+    }
+  }
   /* -------------------------------------------------------------LandingReview--------------------------------------------------- */
   .landing-review{
-    padding: 90px 0px;
+    padding: 70px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -477,13 +662,16 @@
     }
   }
   @media only screen and (max-width:600px){
+    .landing-review{
+      padding-top: 60px;
+    }
     .landing-review-container{
         width: 90%;
     }
   }
   @media only screen and (max-width:400px){
     .landing-review{
-      padding-top: 70px;
+      padding-top: 40px;
     }
     .landing-review-container{
         width: 90%;

@@ -105,14 +105,14 @@ const Navbar = () => {
           <div className="navbar-community" onClick={() => handleNavigation('/')}>
             Community
           </div>
-          <div className='navbar-buttons'>
+          {/* <div className='navbar-buttons'>
           <Link href='/login' className="navbar-login">
             Login
           </Link>
           <Link href='/signup'className="navbar-signup">
             Signup
           </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

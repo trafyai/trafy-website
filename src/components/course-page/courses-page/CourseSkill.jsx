@@ -19,13 +19,24 @@ const CourseSkill = (props) => {
                 </div>
             </div>
 
-            <div className='course-tools'>
+            {/* <div className='course-tools'>
                 <h2>Tools Covered</h2>
                 <div className='course-tools-contents'>
                     {props.toolsIcon.map((data,index)=>(
                     <Image key={index} src={data.image} width={40} height={40} alt={data.alt}/>))}
                 </div>
-            </div>
+            </div> */}
+            {!["prompt-engineering", "python-programming"].includes(props.id) && (
+  <div className='course-tools'>
+    <h2>Tools Covered</h2>
+    <div className='course-tools-contents'>
+      {props.toolsIcon.map((data, index) => (
+        <Image key={index} src={data.image} width={40} height={40} alt={data.alt} />
+      ))}
+    </div>
+  </div>
+)}
+
 
             <div className='course-includes'>
                 <h2>This course includes</h2>

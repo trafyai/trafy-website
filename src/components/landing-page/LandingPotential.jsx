@@ -9,10 +9,10 @@ export const LandingPotential = () => {
             <h2>Unlock your career potential with in demand skills.</h2>
             <p>The demands of the modern workforce extend beyond traditional skills.</p>
             <div className='landing-potential-contents'>
-                <p>Flexible Payments Plan</p>
-                <p>Live Classes</p>
-                <p>Free Doubt Clearing Session</p>
-                <p>Hands on Project</p>
+                <span>Flexible Payments Plan</span>
+                <span>Live Classes</span>
+                <span>Free Doubt Clearing Session</span>
+                <span>Hands on Project</span>
             </div>
         </div>
     </div>

@@ -20,7 +20,7 @@ const page = ({params}) => {
       <CourseProjects {...data}/>
       <CourseCertificate {...data}/>
       <CourseReview {...data}/>
-      <CourseRelated {...data}/>
+      {/* <CourseRelated {...data}/> */}
     </>
   )
 }
