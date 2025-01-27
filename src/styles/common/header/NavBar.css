@@ -43,8 +43,27 @@
 .navbar-community:hover{
   color: var(--h-black);
 }
-.navbar-button{
-  padding: 8px 18px;
+.navbar-buttons{
+  display: flex;
+  gap: 1rem;
+}
+.navbar-login,.navbar-signup:hover {
+  padding: 7px 28px;
+  width: max-content;
+  height: max-content;
+  border: 1px solid var(--h-black);
+  border-radius: 8px;
+  background-color: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--h-black);
+  font-family: var(--h-font);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.navbar-signup,.navbar-login:hover{
+  padding: 7px 28px;
   width: max-content;
   height: max-content;
   border: 1px solid var(--h-black);

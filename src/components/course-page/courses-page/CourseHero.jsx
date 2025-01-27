@@ -1,5 +1,6 @@
 import React from 'react';
 import '@styles/course/course-single/CoursePage.css';
+import Link from 'next/link';
 import Image from 'next/image';
 import rating from '@public/assets/Images/course-page/hero-section/rating.svg'
 const CourseHero = (props) => {
@@ -24,12 +25,9 @@ const CourseHero = (props) => {
                             <Image src={rating}  height={14}/>
                             <span>{props.ratings}</span>
                         </div>
-                        <button>Join Now</button>
+                       <Link href={`${props.id}/join-now`}> <button>Join Now</button></Link>
                     </div>
-                {/* </div> */}
-                {/* <div className='course-hero-right'>
 
-                </div> */}
             </div>
         </div>
     );

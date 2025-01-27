@@ -1,6 +1,6 @@
 .landing-hero{
-    padding-top: 120px;
-    padding-bottom: 90px;
+    padding-top: 140px;
+    padding-bottom: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,11 @@
     align-items: center;
     gap: 0.7rem;
 }
+.landing-hero-button:hover{
+  background-color: inherit;
+  color: var(--h-black);
 
+}
 @media only screen and (max-width:1280px){
     .landing-hero-container h1{
         width: 70%;
@@ -98,7 +102,39 @@
         font-size: 18px;
     }
 }
-
+/* -------------------------------------------------------------------Landing Company Logo------------------------------------- */
+.landing-company{
+    padding: 90px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.landing-company-container{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    align-items: center;
+    justify-content: center;
+}
+.landing-company-container h2{
+    font-size: 24px;
+    color:var(--h-black);
+    font-weight: 500;
+    font-family: var( --h-font);
+    text-align: center;
+}
+.landing-company-logo{
+    width: 80%;
+    display:flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.landing-company-logo img{
+    height: 28px;
+    width: auto;
+}
 /* -------------------------------------------------------------------Landing courses---------------------------------------------------- */
 .landing-courses{
     padding: 90px 0px;
@@ -262,7 +298,7 @@
     gap: 3.5rem;
   }
   .landing-certificate-headline{
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -270,9 +306,11 @@
   }
   .landing-certificate-headline h2{
     font-size: 32px;
+    width: 80%;
     color:var(--h-black);
     font-weight: 500;
     font-family: var( --h-font);
+    line-height: 150%;
   }
   .landing-certificate-headline p{
     font-size: 18px;
@@ -281,8 +319,17 @@
     font-family: var( --h-font);
     line-height: 150%;
   }
+  .landing-certificate-stamps{
+    padding-top: 6PX;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .landing-certificate-stamps img{
+    height: 50px;
+    width: auto;
+  }
   .landing-certificate-image{
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: flex-end;
   }
@@ -290,9 +337,62 @@
     width: auto;
     height: auto;
   }
+
+  /* -------------------------------------------------------------Landing Skill------------------------------------------------ */
+
+  .landing-skill{
+    padding: 90px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing-skill-container{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .landing-skill-headline{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .landing-skill-headline h2{
+    font-size: 32px;
+    width: 80%;
+    color:var(--h-black);
+    font-weight: 500;
+    font-family: var( --h-font);
+    line-height: 150%;
+  }
+  .landing-skill-headline p{
+    font-size: 18px;
+    color:var(--p-black);
+    font-weight: 400;
+    font-family: var( --h-font);
+    line-height: 150%;
+  }
+  .landing-skill-container button{
+    width: max-content;
+    height: max-content;
+    padding: 12px 20px;
+    border: 1px solid var(--trafy-black);
+    border-radius: 8px;
+    background-color: var(--trafy-black);
+    color: var(--h-white);
+    font-size: 16px;
+    font-family: var(--h-font);
+    font-weight: 400;
+  }
+  .landing-skill-container button:hover{
+    background-color: var(--trafy-white);
+    color: var(--h-black);
+  }
   /* -------------------------------------------------------------LandingReview--------------------------------------------------- */
   .landing-review{
-    padding-top: 90px;
+    padding: 90px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -310,10 +410,11 @@
     font-family: var( --h-font);
   }
   .landing-review-contents{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
+    row-gap: 2.5rem;
   }
   .landing-review-box{
     width: 350px;

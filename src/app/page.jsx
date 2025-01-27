@@ -5,6 +5,8 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { LandingPotential } from '@components/landing-page/LandingPotential';
 import { Landingcertificate } from '@components/landing-page/LandingCertificate';
 import LandingReview from '@components/landing-page/LandingReview';
+import LandingCompanyLogo from '@components/landing-page/LandingCompanyLogo';
+import LandingSkill from '@components/landing-page/LandingSkill';
 
 export const metadata= {
   title: "trafy - Your Personalised AI mentor",
@@ -61,9 +63,11 @@ const Home = () => {
     <div>
         <GoogleAnalytics gaId="G-THWZDJH6WZ" />
         <LandingHero/>
-        <LandingCourses/>
+        <LandingCompanyLogo/>
+        <LandingCourses id="pathway-section" />
         <LandingPotential/>
         <Landingcertificate/>
+        <LandingSkill/>
         <LandingReview/>
     </div>
    
