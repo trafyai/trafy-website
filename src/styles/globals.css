@@ -53,13 +53,13 @@
     --trafy-black:#02020a;
     /* --trafy-white:#fffef7; */
     --trafy-white:#ffffff;
-
+    --trafy-grey:#2c2c2c;
     --trafy-pink:#FF79AB;
     --trafy-blue:#2A42F2;
     --h-black:#02020a;
     /* --p-black:#3e3e3e; */   --p-black:#424242;
-    --h-white:#ffffff;
-    --p-white:#d1d1d1;
+    /* --h-white:#ffffff; */ --h-white:#F5F2FF;
+    --p-white:#d1d1d1; --p-white:#e4e0f0;
     --box-border:#e1e3e1;
 
    /* ==================header====================== */
