@@ -9,7 +9,7 @@ const CourseReview = (props) => {
             <h2>Review</h2>
             <div className='course-review-contents'>
                 {props.review.map((data,index)=>(
-                <div className='course-review-box'>
+                <div className='course-review-box' key={index}>
                     <div className='course-review-name'>
                         <div className='course-review-name-image'>
                         {data.name && data.name[0].toUpperCase()}

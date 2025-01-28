@@ -7,7 +7,7 @@ const CourseProjects = (props) => {
             <h2>Projects</h2>
             <div className='course-projects-content'>
                 {props.project.map((data,index)=>(
-                <div className='course-projects-box'>
+                <div className='course-projects-box' key={index}>
                     <div className='course-project-box-heading'>
                         <h3>{data.title}</h3>
                     </div>

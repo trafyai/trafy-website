@@ -11,7 +11,7 @@ const CourseSkill = (props) => {
     <div className='course-skill'>
         <div className='course-skill-container'>
             <div className='course-gain'>
-                <h2>Skills you'll gain</h2>
+                <h2>Skills you&apos;ll gain</h2>
                 <div className='course-gain-contents'>
                     {props.skillsGain.map((data,index)=>(
                 <h3 key={index}>{data}</h3>
