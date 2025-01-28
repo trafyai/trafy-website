@@ -13,6 +13,22 @@
   backdrop-filter: blur(15px); */
   z-index: 1000; /* Ensure the navbar stays on top */
 }
+.navbar {
+  transition: transform 0.3s ease-in-out, border-bottom 0.3s;
+}
+
+.navbar.scrolled {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.visible {
+  transform: translateY(0);
+}
+
 .navbar-container{
   width: 95%;
   display: flex;
@@ -93,7 +109,27 @@
 .navbar-contents-menu,  .navbar-contents-drop{
   display: none;
 }
-
+.get-started{
+  margin: 16px;
+  padding: 9px 28px;
+  width: 95%;
+  height: max-content;
+  border: 1px solid var(--h-black);
+  border-radius: 8px;
+  background-color: var(--h-black);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--h-white);
+  font-family: var(--h-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.get-started:hover{
+  background-color: inherit;
+  color: var(--trafy-black);
+}
 @media only screen and (max-width:850px){
   .navbar-contents{
       display: none;
@@ -105,38 +141,80 @@
       display: none;
   }
   .navbar-contents-drop.open{
-      padding-top: 1.5rem;
-      width: 100%;
-      height: 100vh;
+      /* padding-top: 1.5rem;
+      width: 60%;
+      height: 93vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: var(--trafy-white);
+      z-index: 1000;  */
+      padding-top: 1.5rem;
+      width: 60%;
+      height: 93vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       position: absolute;
       top: 50px;
       right: 0;
       background-color: var(--trafy-white);
       z-index: 1000;
-
-          /* backdrop-filter: blur(10px);
-          background-color: rgba(255, 255, 255, 0.3);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          border-radius: 12px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-        
-        
-  }
+      
+      /* Adding the left side shadow */
+      box-shadow: -400px 0px 0px 0px rgba(0,0,0,0.75);
+    }
   .navbar-contents-mobile{
-      padding-left: 5px;
+      padding:0px 16px;
       width: 90%;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-
+  }
+  .navbar-profile{
+    margin: 16px;
+    padding: 10px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .navbar-profile-name{
+    width: 30px;
+    height: 30px;
+  }
+  .navbar-profile p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--h-black);
+    font-family: var(--h-font);
   }
   .navbar-research ,.navbar-academy, .navbar-resources,
-.navbar-community{
+.navbar-community {
   font-size: 18px;
   font-weight: 400;
   color: var(--h-black);
   font-family: var(--h-font);
+  cursor: pointer;
 }
+}
+@media only screen and (max-width:700px){
+  .navbar-contents-drop.open{
+    box-shadow: -300px 0px 0px 0px rgba(0,0,0,0.75);
+
+  }
+}
+@media only screen and (max-width:600px){
+  .navbar-contents-drop.open{
+    width: 80%;
+  }
+}
+@media only screen and (max-width:400px){
+  .navbar-contents-drop.open{
+    width: 100%;
+  }
 }

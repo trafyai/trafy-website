@@ -1,10 +1,10 @@
 import React from 'react'
 import '@styles/landing-page/LandingPage.css';
 import Image from 'next/image';
-import certificate from '@public/assets/Images/course-page/certificate/certificate.svg'
-import google from '@public/assets/Images/landing-page/google-scholar.svg';
-import tn from '@public/assets/Images/landing-page/tnsdc.svg';
-import aicte from '@public/assets/Images/landing-page/aicte.svg';
+import certificate from '@public/assets/Images/course-page/certificate/certificate.png'
+import google from '@public/assets/Images/landing-page/logos/gfep.jpg';
+import tn from '@public/assets/Images/landing-page//logos/tnsdc.png';
+import aicte from '@public/assets/Images/landing-page//logos/aicte.png';
 
 export const Landingcertificate = () => {
   return (

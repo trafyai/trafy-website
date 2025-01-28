@@ -134,16 +134,76 @@
     text-align: center;
     line-height: 150%;
 }
-.landing-company-logo{
+/* .landing-company-logo-d{
     width: 80%;
     display:flex;
     gap: 2.5rem;
     flex-wrap: wrap;
     justify-content: center;
 }
-.landing-company-logo img{
+.landing-company-logo-d img{
     height: 28px;
     width: auto;
+} */
+/* .landing-company-logo-container{
+  display: none;
+} */
+.landing-company-logo-d{
+  display: none;
+}
+.landing-company-container{
+overflow-x: hidden;
+}
+
+.landing-company-container::before,
+.landing-company-container::after {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+width: 10%;
+pointer-masterclass: none;
+z-index: 1;
+background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.landing-company-container::before {
+left: 0;
+}
+
+.landing-company-container::after {
+right: 0;
+transform: rotateY(180deg);
+}
+.landing-company-logo-container {
+display: flex;
+overflow: hidden;
+padding-top: 24px;
+white-space: nowrap;
+}
+.landing-company-logo {
+display: flex;
+animation: 25s slide infinite linear;
+}
+.landing-company-logo img {
+  width:auto ;
+  height: 26px;
+margin: 0px 16px;
+}
+@keyframes slide {
+from {
+  transform: translateX(0);
+}
+
+to {
+  transform: translateX(-100%);
+}
+}
+.landing-company-container {
+gap: 1rem;
+}
+.landing-company-heading p {
+font-size: 16px;
 }
 @media only screen and (max-width:1024px){
   .landing-company{
@@ -152,7 +212,7 @@
   .landing-company-container{
     width: 85%;
   }
-  .landing-company-logo{
+  .landing-company-logo-d{
     width: 100%;
   }
 }
@@ -163,19 +223,16 @@
   .landing-company-container h2{
     font-size: 20px;
   }
-  .landing-company-logo{
+  .landing-company-logo-d{
     gap: 2rem;
   }
 }
 @media only screen and (max-width:400px){
-  .landing-company-logo{
-    gap: 1.5rem;
-  }
-  .landing-company-logo img {
-    height: 24px;
-    width: auto;
+  
 }
-}
+
+
+
 /* -------------------------------------------------------------------Landing courses---------------------------------------------------- */
 .landing-courses{
     padding: 70px 0px;
@@ -451,8 +508,9 @@
     justify-content: flex-end;
   }
   .landing-certificate-image img{
-    width: auto;
+    width: 100%;
     height: auto;
+    border: 1px solid #d1d1d1;
   }
   @media only screen and (max-width:1200px){
     .landing-certificate-image{
