@@ -23,8 +23,9 @@ const CourseRelated = (props) => {
     .slice(0, 3); // Limit to 3 courses
 
   return (
-    <div className="course-related" style={{ padding: relatedCourses.length > 0 ? '0' : '35px 0px' }}>
-      {relatedCourses.length > 0 && (
+    <>
+    {relatedCourses.length > 0 && (
+    <div className="course-related" >
         <div className="course-related-container">
           <h2>Related Courses</h2>
           <div className="course-related-contents">
@@ -45,8 +46,9 @@ const CourseRelated = (props) => {
             ))}
           </div>
         </div>
-      )}
     </div>
+  )}
+  </>
   );
 };
 

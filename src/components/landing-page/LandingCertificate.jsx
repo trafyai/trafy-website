@@ -21,7 +21,7 @@ export const Landingcertificate = () => {
             </div>
 
             <div className='landing-certificate-image'>
-                <Image src={certificate}/>
+                <Image src={certificate} alt='certificate'/>
             </div>
         </div>
     </div>

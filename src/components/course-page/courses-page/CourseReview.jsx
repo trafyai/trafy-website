@@ -16,7 +16,7 @@ const CourseReview = (props) => {
                         </div>
                         <div className='course-review-name-contents'>
                             <p>{data.name}</p>
-                            <Image src={rating} />
+                            <Image src={rating} alt='rating'/>
                         </div>
                     </div>
                     <div className='course-review-name-desc'>

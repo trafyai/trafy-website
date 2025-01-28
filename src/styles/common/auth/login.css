@@ -2,7 +2,7 @@
 .login{
     width: 100%;
     padding-top: 120px;
-    padding-bottom: 60px;
+    padding-bottom: 90px;
     /* background-color:  #fff4ec; */
     background-color: var(--trafy-white);
     display: flex;
@@ -57,7 +57,7 @@
 
 .eye{
     position: absolute;
-    top: 50%;
+    top: 53%;
     transform: translateY(-50%);
     right: 10px;
     cursor: pointer;

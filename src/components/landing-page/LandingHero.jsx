@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import '@styles/landing-page/LandingPage.css';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const LandingHero = () => {
@@ -10,9 +11,9 @@ const LandingHero = () => {
         <div className='landing-hero-container'>
             <h1>Become a Generative AI Expert</h1>
             <p>Level Up with AI! Unlock creativity. Streamline workflow. Boost productivity. Create stunning designs. Gain in-demand skills. Propel your career.</p>
-            <div className='landing-hero-button'>
+            <Link href='/advanced-generative-ai-program' className='landing-hero-button'>
                 Join Now
-            </div>
+            </Link>
         </div>
     </div>
   )

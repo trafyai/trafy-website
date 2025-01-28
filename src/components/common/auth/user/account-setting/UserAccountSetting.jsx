@@ -216,14 +216,13 @@ export default function UserAccountSetting() {
 
   return (
     <div className="profile-contents">
-      {showPopup && (
+      {/* {showPopup && (
         <div className="popup">
           <span>{popupMessage}</span>
           <button className="close-popup" onClick={() => setShowPopup(false)}>&#x1F5D9;</button>
         </div>
       )}
 
-      {/* Crop Modal */}
       {showCropModal && (
         <div className="crop-modal">
           <div className="crop-container">
@@ -264,11 +263,11 @@ export default function UserAccountSetting() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       <form className="profile-form" onSubmit={handleUpdate}>
-        <h2>Profile</h2>
-        <div className="profile-pic-wrapper">
+        {/* <h2>Profile</h2> */}
+        {/* <div className="profile-pic-wrapper">
           <Image src={profilePicURL || Default} alt="Profile" className="profile-pic" width={100} height={100} />
           <label htmlFor="profilePic" className="profile-pic-upload">
             <FaPen className='profile-pen' />
@@ -280,7 +279,7 @@ export default function UserAccountSetting() {
               accept="image/*"
             />
           </label>
-        </div>
+        </div> */}
         {/* Rest of the form remains the same */}
         <div className="Fname">
           <label htmlFor="fname">First name:</label>

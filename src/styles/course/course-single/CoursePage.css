@@ -609,7 +609,7 @@
   .course-certificate-image{
     max-height: 350px;
     position: absolute;
-    top: -13px;
+    top: -24px;
     right: 24px;
   }
   .course-certificate-image img{
@@ -758,7 +758,7 @@
   }
   /* --------------------------------------------------------Related Courses----------------------------------------- */
   .course-related{
-    padding: 90px 0px;
+    padding-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: center;

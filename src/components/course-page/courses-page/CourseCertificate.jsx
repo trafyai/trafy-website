@@ -14,7 +14,7 @@ const CourseCertificate = () => {
                 Share it on social media and in your performance review</p>
             </div>
             <div className='course-certificate-image'>
-                <Image src={certificate} />
+                <Image src={certificate} alt='certificate'/>
             </div>
         </div>
     </div>

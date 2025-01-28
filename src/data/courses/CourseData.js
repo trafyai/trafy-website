@@ -1,8 +1,4 @@
 import RatingStar from "@public/assets/Images/course-page/hero-section/rating-star.svg";
-import Whatsapp from '@public/assets/Images/comman/common/socials/whatsapp.png';
-import Facebook from '@public/assets/Images/comman/common/socials/facebook.png';
-import Linkedin from '@public/assets/Images/comman/common/socials/linkedin.png';
-import X from '@public/assets/Images/comman/common/socials/twitter.png';
 
 //----------------------------- About-------------------------
 
@@ -10,11 +6,16 @@ import Figma from "@public/assets/Images/course-page/hero-section/Figma.png";
 import Miro from "@public/assets/Images/course-page/hero-section/Miro.png";
 import Chatgpt from "@public/assets/Images/course-page/hero-section/ChatGPT.png";
 import Gemini from "@public/assets/Images/course-page/hero-section/Gemini.png";
-import Framer from "@public/assets/Images/course-page/hero-section/Framer.png";
-import Gtm from "@public/assets/Images/course-page/hero-section/GTM.png";
-import Analytics from "@public/assets/Images/course-page/hero-section/analytics.png";
-import Mailchimp from "@public/assets/Images/course-page/hero-section/mailchimp.png";
-import Hubspot from "@public/assets/Images/course-page/hero-section/hubspot.png";
+import python from '@public/assets/Images/course-page/tools/python.png'
+import claude from '@public/assets/Images/course-page/tools/claude.png'
+import colab from '@public/assets/Images/course-page/tools/colab.png'
+import huggingface from '@public/assets/Images/course-page/tools/huggingface.png'
+import jupyter from '@public/assets/Images/course-page/tools/jupyter.png'
+import numpy from '@public/assets/Images/course-page/tools/numpy.png'
+import ollama from '@public/assets/Images/course-page/tools/ollama.png'
+import pandas from '@public/assets/Images/course-page/tools/pandas.png'
+
+
 
  const courseData = [
     {
@@ -318,10 +319,9 @@ import Hubspot from "@public/assets/Images/course-page/hero-section/hubspot.png"
             "Complex Problem Solving"
         ],
         "toolsIcon": [
-            {image:Figma.src,alt:"figma"},
-            {image:Miro.src,alt:"miro"},
             {image:Chatgpt.src,alt:"chatgpt"},
             {image:Gemini.src,alt:"gemini"},
+            {image:claude.src,alt:"claude"},
         ],
         "courseIncludes": [
             "Flexible Payment Plan",
@@ -365,7 +365,7 @@ import Hubspot from "@public/assets/Images/course-page/hero-section/hubspot.png"
     {
         "id": "python-programming",
         "bgColor": "#FAE1FA",
-        "category": "Programming Course",
+        "category": "AI Course",
         "level": "Beginner to Intermediate",
         "duration": "25 Days",
         "courseHeading": "Python Programming Crash Course",
@@ -389,10 +389,9 @@ import Hubspot from "@public/assets/Images/course-page/hero-section/hubspot.png"
             "Chatbot Development"
         ],
         "toolsIcon": [
-            {image:Figma.src,alt:"figma"},
-            {image:Miro.src,alt:"miro"},
-            {image:Chatgpt.src,alt:"chatgpt"},
-            {image:Gemini.src,alt:"gemini"},
+            {image:python.src,alt:"python"},
+            {image:jupyter.src,alt:"jupyter"},
+            {image:ollama.src,alt:"ollama"},
         ],
         "courseIncludes": [
             "Flexible Payment Plan",
@@ -470,7 +469,121 @@ import Hubspot from "@public/assets/Images/course-page/hero-section/hubspot.png"
                 "content": "I’ve taken several Python courses, but this one stood out due to its clear explanations and step-by-step approach. The chatbot project helped me gain real-world Python skills!"
             }
         ]
+    },
+    {
+        "id": "advanced-generative-ai-course",
+        "bgColor": "#FAE1FA",
+        "category": "AI Course",
+        "level": "Advanced",
+        "duration": "12 Weeks",
+        "courseHeading": "Advanced Generative AI Certification Course",
+        "courseDescription": "This advanced AI certification program covers Python, machine learning, deep learning, and NLP, with hands-on projects to help you build AI solutions like chatbots and text generation models.",
+        "certificationCourse": "Certification Course: Advanced Generative AI Programming",
+        "rating": "4.9",
+        "ratingIcon": "RatingStar",
+        "ratings": "800 ratings",
+        "learnPoints": [
+            "Foundational Python Skills: Master Python programming basics, including syntax, data types, and operators, essential for AI development.",
+            "Deep Learning & Neural Networks: Learn advanced techniques in deep learning, including CNNs, RNNs, LSTMs, and GANs, to build robust AI models.",
+            "Natural Language Processing (NLP): Dive into NLP concepts like text preprocessing, tokenization, stemming, lemmatization, and apply them in real-world projects.",
+            "Generative Models: Learn how to create and use Generative Adversarial Networks (GANs) to generate data like images, text, and more.",
+            "Hands-on Projects: Build AI-driven projects such as text generation systems and neural network models to apply your learning."
+        ],
+        "skillsGain": [
+            "Advanced Python Programming",
+            "Machine Learning (Regression, Classification, Naïve Bayes)",
+            "Deep Learning (Neural Networks, CNNs, RNNs, LSTMs, GANs)",
+            "Natural Language Processing (NLP)",
+            "Generative Adversarial Networks (GANs)",
+            "Data Processing and Visualization"
+        ],
+        "toolsIcon": [
+            {image:python.src,alt:"python"},
+            // {image:pandas.src,alt:"pandas"},
+            // {image:numpy.src,alt:"numpy"},
+            {image:jupyter.src,alt:"jupyter"},
+            {image:huggingface.src,alt:"huggingface"},
+            {image:ollama.src,alt:"ollama"},
+            {image:Chatgpt.src,alt:"chatgpt"},
+        ],
+        "courseIncludes": [
+            "Flexible Payment Plan",
+            "Live Classes with Real-Time Examples",
+            "Free Doubt Clearing Sessions",
+            "Career Support and Guidance",
+            "Hands-on Projects"
+        ],
+        "syllabus": [
+            {
+                "title": "Introduction to Python Programming",
+                "contents": "Begin with the basics of Python programming, focusing on its application in AI and data science, and explore Python's role in AI development."
+            },
+            {
+                "title": "Advanced Python Concepts",
+                "contents": "Learn about advanced Python concepts such as object-oriented programming, data structures, and error handling for building efficient AI solutions."
+            },
+            {
+                "title": "Machine Learning Fundamentals",
+                "contents": "Cover foundational machine learning concepts, including supervised and unsupervised learning, and learn algorithms like linear regression, decision trees, and Naïve Bayes."
+            },
+            {
+                "title": "Deep Learning with Neural Networks",
+                "contents": "Dive deep into artificial neural networks (ANNs), and learn how to implement and train deep learning models using Python and TensorFlow."
+            },
+            {
+                "title": "Convolutional Neural Networks (CNNs)",
+                "contents": "Understand CNNs and their applications in image classification and processing, including hands-on work with datasets like MNIST."
+            },
+            {
+                "title": "Recurrent Neural Networks (RNNs) and LSTMs",
+                "contents": "Learn about RNNs and LSTMs, and understand their applications in sequential data like text and time series."
+            },
+            {
+                "title": "Generative Adversarial Networks (GANs)",
+                "contents": "Explore GANs, understanding their structure and how they generate data, such as images and text. Learn how to implement GANs in Python."
+            },
+            {
+                "title": "Natural Language Processing (NLP)",
+                "contents": "Master NLP techniques like text preprocessing, tokenization, and lemmatization, and apply them in real-world text-based applications."
+            },
+            {
+                "title": "Text Generation and Language Models",
+                "contents": "Learn to build generative text models, including working with large language models (LLMs) for AI-driven content generation."
+            }
+        ],
+        "project": [
+            {
+                "title": "AI-Based Text Generation",
+                "description": "Create a text generation model using neural networks and LLMs to generate coherent and contextually relevant text."
+            },
+            {
+                "title": "Generative Adversarial Network (GAN) Implementation",
+                "description": "Build a GAN model for generating realistic images from noise and understand the training challenges involved."
+            },
+            {
+                "title": "NLP Chatbot with Python",
+                "description": "Develop a chatbot using NLP techniques, including text preprocessing and tokenization, and enhance its responses with LLM integration."
+            }
+        ],
+        "review": [
+            {
+                "name": "Anjali Mehta",
+                "letter": "A",
+                "content": "The AI course was transformative! The instructor broke down complex topics into manageable chunks, and the hands-on projects gave me practical experience in AI development."
+            },
+            {
+                "name": "Vikas Raj",
+                "letter": "V",
+                "content": "As someone with a strong interest in deep learning, this course was perfect for me. It covered everything from the basics to advanced models like GANs, and the projects were incredibly engaging."
+            },
+            {
+                "name": "Priya Sharma",
+                "letter": "P",
+                "content": "This was the best course I’ve taken! The deep learning modules were particularly insightful, and the GAN and NLP sections really opened my eyes to what AI can do."
+            }
+        ]
     }
+    
     
     
 ]

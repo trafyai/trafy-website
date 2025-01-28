@@ -43,6 +43,19 @@
 .navbar-community:hover{
   color: var(--h-black);
 }
+.navbar-profile-name{
+  background-color: var(--trafy-black);
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  font-size: 14px;
+  font-family: var(--h-font);
+  color: var(--h-white);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .navbar-buttons{
   display: flex;
   gap: 1rem;
@@ -98,7 +111,7 @@
       display: flex;
       justify-content: center;
       position: absolute;
-      top: 60px;
+      top: 50px;
       right: 0;
       background-color: var(--trafy-white);
       z-index: 1000;
@@ -121,7 +134,7 @@
   }
   .navbar-research ,.navbar-academy, .navbar-resources,
 .navbar-community{
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--h-black);
   font-family: var(--h-font);

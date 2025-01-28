@@ -22,7 +22,7 @@ const CourseHero = (props) => {
                         </div>
                         <div className='course-hero-rating'>
                             <p>{props.rating}</p>
-                            <Image src={rating}  height={14}/>
+                            <Image src={rating}  height={14} alt='rating'/>
                             <span>{props.ratings}</span>
                         </div>
                        <Link href={`${props.id}/join-now`}> <button>Join Now</button></Link>

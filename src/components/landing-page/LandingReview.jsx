@@ -28,7 +28,7 @@ const LandingReview = (props) => {
                         </div>
                         <div className='landing-review-name-contents'>
                             <p>{data.name}</p>
-                            <Image src={rating} />
+                            <Image src={rating} alt='rating'/>
                         </div>
                     </div>
                     <div className='landing-review-name-desc'>

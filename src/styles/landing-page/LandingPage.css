@@ -105,7 +105,7 @@
     }
     .landing-hero-container h1{
         width: 100%;
-        font-size: 42px;
+        font-size: 38px;
      }
      .landing-hero-container p,.landing-hero-button{
         font-size: 18px;
@@ -262,6 +262,20 @@
       width: 85%;
     }
   }
+  @media only screen and (max-width:850px){
+    .landing-courses-box{
+      width: 47%;
+    }
+  }
+  @media only screen and (max-width:850px){
+    .landing-courses-contents{
+      gap: 1.5rem;
+    }
+    .landing-courses-box{
+      width: 47%;
+      height: 450px;
+    }
+  }
   @media only screen and (max-width:600px){
     .landing-courses{
       padding: 60px 0px;
@@ -272,6 +286,10 @@
     .landing-courses-container h2{
       font-size: 28px;
     }
+    .landing-courses-box{
+      width: 100%;
+      height: 350px;
+    }
   }
   @media only screen and (max-width:400px){
     .landing-courses{
@@ -279,6 +297,10 @@
     }
     .landing-courses-contents{
       gap: 1.5rem;
+    }
+    .landing-courses-box{
+      width: 100%;
+      height: 400px;
     }
     .landing-courses-box-contents-desc h3{
       font-size: 20px;

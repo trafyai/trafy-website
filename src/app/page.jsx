@@ -9,17 +9,9 @@ import LandingCompanyLogo from '@components/landing-page/LandingCompanyLogo';
 import LandingSkill from '@components/landing-page/LandingSkill';
 
 export const metadata= {
-  title: "trafy - Your Personalised AI mentor",
+  title: "trafy - Become Gen AI expert",
   description:
-    "Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance",
-  // keywords: [
-  //   "elastic",
-  //   "python",
-  //   "javascript",
-  //   "react",
-  //   "machine learning",
-  //   "data science"
-  // ],
+    "Learn UI/UX designing and artificial intelligence with our interactive courses and accelerate your career with expert guidance",
   openGraph: {
     url: "https://academy.trafy.ai",
     type: "website",
