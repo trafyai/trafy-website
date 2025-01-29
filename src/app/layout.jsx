@@ -64,7 +64,6 @@ export const metadata= {
       "application/rss+xml": "https://academy.trafy.ai/rss.xml"
     }
   },
-  applicationName: "Blog | Minh Vu",
   appleWebApp: {
     title: "trafy - Your Personalised AI mentor",
     statusBarStyle: "default",
