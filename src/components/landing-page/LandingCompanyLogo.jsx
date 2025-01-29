@@ -59,7 +59,7 @@ const LandingCompanyLogo = () => {
                 <Image src={clickup} alt='clickup'/>
                 <Image src={wati} alt='wati'/>
                 <Image src={beehiiv} alt='beehiiv' style={{height:"22px"}}/>
-                <Image src={amazon} alt='amazon'/>
+                <Image src={amazon } alt='amazon'/>
                 </div>
               
             </div>

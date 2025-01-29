@@ -14,6 +14,14 @@
   z-index: 1000; /* Ensure the navbar stays on top */
 }
 .navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+/* .navbar {
   transition: transform 0.3s ease-in-out, border-bottom 0.3s;
 }
 
@@ -27,7 +35,7 @@
 
 .navbar.visible {
   transform: translateY(0);
-}
+} */
 
 .navbar-container{
   width: 95%;
@@ -110,9 +118,8 @@
   display: none;
 }
 .get-started{
-  margin: 16px;
   padding: 9px 28px;
-  width: 95%;
+  width: 100%;
   height: max-content;
   border: 1px solid var(--h-black);
   border-radius: 8px;
@@ -141,41 +148,31 @@
       display: none;
   }
   .navbar-contents-drop.open{
-      /* padding-top: 1.5rem;
-      width: 60%;
-      height: 93vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: absolute;
-      top: 50px;
-      right: 0;
-      background-color: var(--trafy-white);
-      z-index: 1000;  */
+    padding: 24px;
       padding-top: 1.5rem;
-      width: 60%;
-      height: 93vh;
+      width: 100%;
+      height: 50vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       position: absolute;
-      top: 50px;
+      top: 54px;
       right: 0;
       background-color: var(--trafy-white);
       z-index: 1000;
-      
-      /* Adding the left side shadow */
-      box-shadow: -400px 0px 0px 0px rgba(0,0,0,0.75);
+      border-bottom-right-radius: 16px;
+      border-bottom-left-radius: 16px;
+      border-bottom: 1px solid #d1d1d1;
+      /* box-shadow: -400px 0px 0px 0px rgba(0,0,0,0.75); */
+      box-shadow: -1px 300px 0px 300px rgba(0,0,0,0.75)
     }
   .navbar-contents-mobile{
-      padding:0px 16px;
       width: 90%;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
   }
   .navbar-profile{
-    margin: 16px;
     padding: 10px 16px;
     border: 1px solid #d1d1d1;
     border-radius: 8px;
@@ -201,12 +198,6 @@
   font-family: var(--h-font);
   cursor: pointer;
 }
-}
-@media only screen and (max-width:700px){
-  .navbar-contents-drop.open{
-    box-shadow: -300px 0px 0px 0px rgba(0,0,0,0.75);
-
-  }
 }
 @media only screen and (max-width:600px){
   .navbar-contents-drop.open{
